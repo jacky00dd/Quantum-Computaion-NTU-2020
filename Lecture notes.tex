@@ -490,4 +490,170 @@ If the outcome is $m_{1}$, the state will not be $\ket{\psi_{1}}$ since $\braket
 If the outcome is $m_{2}$, the state will not be $\ket{\psi_{2}}$ since $\braket{\psi_{2}|E_{2}|\psi_{2}}=0$. The state must be $\ket{\psi_{1}}$.\\
 If the outcome is $m_{3}$, however, we do not sure whether we get $\ket{\psi_{1}}$ or $\ket{\psi_{2}}$. We get no information.
 \end{example}
+\begin{postu}
+The state space of a composite physical system is the tensor product of the state space of the compoment physical system. Moreover, if we have system numbered 1 through n, and the system number i is prepared in the state $\ket{\psi_{i}}$, then the joint state of the total system is
+\[
+	\ket{\psi_{i}}\otimes\ket{\psi_{2}}\otimes\cdots\ket{\psi_{n}}
+\] 
+\end{postu}
+\begin{example}
+\textbf{Two qubit system} \\
+Two-qubit state space is $\mathbb{C}^{2}\otimes\mathbb{C}^{2}=\mathbb{C}^{4}$
+\begin{equation*}
+\begin{aligned}
+\ket{0} \\
+\ket{1}
+\end{aligned}
+\otimes
+\begin{aligned}
+\ket{0} \\
+\ket{1}
+\end{aligned}
+\Rightarrow
+\begin{cases}
+\ket{0} \otimes \ket{0}  = \ket{0,0} = \ket{0}\ket{0}\\
+\ket{0} \otimes \ket{1} \\
+\ket{1} \otimes \ket{0} \\
+\ket{1} \otimes \ket{1} \\
+\end{cases}
+\end{equation}
+100 qubits $2^{100}\approx 10^{30}$ memory!! Hilbert space is indeed a big place!
+\end{example}
+\begin{example}
+\[
+	(\mathbb{1}\otimes X)\sqrt{0.1}\ket{00}+\sqrt{0.2}\ket{01}+\sqrt{0.3}\ket{10}+\sqrt{0.4}\ket{11}
+\] 
+\[
+= \sqrt{0.1}\ket{01}+\sqrt{0.2}\ket{00}+\sqrt{0.3}\ket{11}+\sqrt{0.4}\ket{10}
+\] 
+The first operator $\mathbb{1}$ acts on the first qubit space and the second one X acts on the second qubit space.  
+\end{example}
+\begin{Remark}
+Through we can compute parallelly, we have to do many measurements to get the information of the amplitute. Thus, we often use interference to left the amplitute of interest and measure it.
+\end{Remark}
+\paragraph{Basic properties of tensor product under $\mathbb{V}\otimes\mathbb{W}$}%
+\label{par:basic_properties_of_tensor_product_under_votimesw_}
+\\
+\begin{enumerate}
+	\item $z(\ket{v}\otimes\ket{w}) = z\ket{v}\otimes\ket{w}=\ket{v}\otimes (z\ket{w})\ \ \forall z \in \mathbb{C}$
+	\item $\ket{v_{1}}$ and $\ket{v_{2}} \in \mathbb{V}$ and $\ket{w}\in\mathbb{W}$, $(\ket{v_{1}}+\ket{v_{2}})\otimes \ket{w}=\ket{v_{1}}\otimes\ket{w}+\ket{v_{2}}\otimes\ket{w}$
+	\item $\ket{v}\otimes(\ket{w_{1}}+\ket{w_{2}})= \ket{v}\otimes\ket{w_{1}}+\ket{v}\otimes\ket{w_{2}}$\\
+
+		Suppose A and B are linear operators on $\mathbb{V}$ and $\mathbb{W}$ respectively.
+	\item $(A\otimes B)(\ket{v}\otimes\ket{w})=A\ket{v}\otimes B\ket{w}$ 
+	\item $(A\otimes B)( \sum^{}_{i} a_{i}\ket{v_{i}}\otimes\ket{w_{i}})= \sum^{}_{i} a_{i}(A\ket{v_{i}}\otimes B\ket{w_{i}})$ 
+	\item
+	\[
+		A_{m\times n} \otimes B_{p \times q} = \begin{pmatrix} A_{11}B&A_{12}B&\cdots&A_{1n}B\\
+		A_{21}B&A_{22}B&\cdots&A_{2n}B\\
+		\vdots&\vdots&\ddots&\vdots\\
+		A_{m1}B&A_{m2}B&\cdots&A_{mn}B
+	\end{pmatrix}_{mp\times nq}
+	\] 
+\end{enumerate}
+\paragraph{Partial measurement}%
+\label{par:partial_measurement}\ \\
+If the state of a two-qubit system is
+\[
+\ket{\psi}=\alpha_{0}\ket{00}+\alpha_{1}\ket{01}+\alpha_{2}\ket{10}+\alpha_{3}\ket{11}
+\] 
+Measure qubit 1 in tis computational basis.
+\[
+	P_{0}\otimes  \mathbb{1} = \ket{0}\bra{0}\otimes \mathbb{1}
+\] 
+\[
+	P_{1}\otimes \mathbb{1} = \ket{1}\bra{1}\otimes \mathbb{1}
+\] 
+\begin{equation*}
+\begin{aligned}
+	P(m=0) &= \braket{\psi|M_{0}^{\dagger}M_{0}|\psi} = \braket{\psi|M_{0}|\psi} = \braket{\psi|P_{0}\otimes \mathbb{1}|\psi } \\
+			 &=(\bra{00}\alpha_{0}^{*}+\bra{01}\alpha_{1}^{*}+\bra{10}\alpha_{2}^{*}+\bra{11}\alpha_{3}^{*})(\alpha_{0}\ket{00}+\alpha_{1}\ket{01})\\
+			 &= \abs{\alpha_{0}}^{2}+\abs{\alpha_{1}}^{2} \\
+	P(m=1) &= \abs{\alpha_{2}}^{2}+\abs{\alpha_{3}}^{2}
+\end{aligned}
+\end{equation*}
+Post-measurement state
+\[
+	\frac{P_{0}\otimes\mathbb{1}\ket{\psi}}{\sqrt{P(m=0)}} = \frac{\alpha_{0}\ket{00}+\alpha_{1}\ket{01}}{\sqrt{\abs{\alpha_{1}^{2}}+\abs{\alpha_{0}^{2}}}} = \ket{0}\otimes\frac{\alpha_{0}\ket{0}+\alpha_{1}\ket{1}}{\sqrt{\abs{\alpha_{1}^{2}}+\abs{\alpha_{0}^{2}}}} 
+\] 
+\begin{example}
+\[
+\psi = \frac{2}{3}\ket{01}+\frac{2}{3}i\ket{10}+\frac{1}{3}\ket{00}
+\] 
+Measure $1^{st}$ qubit $m_{1}=0$ 
+\[
+\frac{\frac{2}{3}\ket{01}+\frac{1}{3}\ket{00}}{\sqrt{\frac{2}{3}^{2}+\frac{1}{3}^{2}}} = \frac{2}{\sqrt{5}}\ket{01}+\frac{1}{\sqrt{5}}\ket{00} = \ket{0}\otimes \frac{2\ket{1}+\ket{0}}{\sqrt{5}}
+\] 
+Measure $2^{nd}$ qubit $m_{2}=0$
+\[
+\frac{\frac{2}{3}i\ket{10}+\frac{1}{3}\ket{00}}{\sqrt{\frac{2i}{3}^{2}+\frac{1}{3}^{2}}}= \frac{2i\ket{1}+\ket{0}}{\sqrt{5}}\otimes \ket{0}
+\] 
+Measure $2^{nd}$ qubit $m_{2}=1$
+\[
+	\frac{\frac{2}{3}\ket{01}}{\sqrt{\frac{2}{3}^{2}}}=\ket{01}=\ket{0}\otimes\ket{1} 
+\] 
+\end{example}
+\paragraph{Quantum entanglement}%
+\label{par:quantum_entanglement}
+\[
+Bell\ state:\ \ket{\psi}=\frac{\ket{00}+\ket{11}}{\sqrt{2}}
+\] 
+\[
+\ket{\psi}\neq \ket{a}\ket{b}\ non-sepearable
+\] 
+If the state is separable:
+\[
+	\ket{\psi} = (\alpha\ket{0}+\beta\ket{1})\otimes(\gamma\ket{0}+\delta\ket{1_{)}}) = \alpha\gamma\ket{00}+\beta\gamma\ket{10}+\alpha\delta\ket{01}+\beta\delta\ket{11}
+\] 
+\[
+\gamma\beta =  0 \  or \ \alpha\delta=0 \leftrightarrow \alpha\gamma =1 \ and \ \beta\delta = 1
+\] 
+We describe such state being "entagled state" since they can not be understand in terms of Alice's and Bob's individual system, but rather embody come joint property of the system.\\
+\newpage
+\textit{Schr$\ddot{o}$dinger(1935): I would not call entangled one but rahter the characteristic trait of quantum mechanics the one thate enforces its entire departure from classical lines of thought.}\\ \\
+Suppose the initial system state vector is $\ket{\psi(t)}$, and say, there s a second Quantum system called ancilla system (or the meter) in an initial state $\ket{\phi(t)}$. So the intitial states of the combined system is :
+\[
+	\ket{\Psi(t)}=\ket{\psi(t)}\otimes\ket{\phi(t)}=\ket{\psi(t)}\ket{\phi(t)}
+\] 
+Let the two system be coupled together fo a time $T_{1}$
+\[
+	U(T_1) = e^{-i\mathcal{H}T_{1}/\hbar} \ \ \ \mathcal{H}: total Hamiltonian 
+\] 
+\begin{equation*}
+\begin{align*}
+	\ket{\Psi(t+T_1)}&=U(T_{1})\ket{\psi(t)}\ket{\phi(t)}\\
+						  &= \sum^{}_{m} \beta_{m}(t)\ket{\psi_{m}(t)}\ket{\phi_{m}} 
+\end{align*}
+\end{equation*}
+\[
+\ \ \ket{\phi_{m}}\ is\ the\ orthonomal\  basis,\ but\ \ket{\psi_{m}(t)}\ may\ not\ orthogonal. 
+\] 
+Now let the meter be measured projectively over a small time interval $T_{2}$ and the outcome is m, the post measurement state is 
+\[
+	\ket{\Psi_{m}(t+T_{1}+T_{2})} = \frac{[\mathbb{1}\otimes \ket{\phi_{m}}\bra{\phi_{m}}]U(T_{1})\ket{\psi(t)}\ket{\phi(t)}}{\sqrt{P_{m}(T_{2})}}=\frac{M_{m}}{\sqrt{P_{m}}}\ket{\phi_{m}}\ket{\psi(t)}
+\] 
+\begin{equation*}
+\begin{aligned}
+	P_{m}(T_{2}) &= \braket{\Psi(t+T_{1})|P_{m}|\Psi(t+T_{1})} \\
+					 &= \bra{\phi(t)}\bra{\psi(t)}U^{\dagger}(T_{1})[\mathbb{1}\otimes \ket{\phi_{m}}\bra{\phi_{m}}]U(T_{1})\ket{\psi(t)}\ket{\phi(t)}\\
+					 &= \braket{\psi(t)|M_{m}^{\dagger}M_{m}|\psi(t)}\ \\ 
+\end{aligned}
+\end{equation*}
+\[
+	 \forall M_{m}=\braket{\phi_{m}|U(T_{1})|\phi(t)}\ \textit{acting on the system Hilbert space only }
+\] 
+The completeness condition:
+\begin{equation*}
+\begin{aligned}
+	\sum^{}_{m} M_{m}^{\dagger}M_{m} &= \sum^{}_{m} \braket{\phi(t)|U^{\dagger}(T_{1})|\phi_{m}}\braket{\phi_{m}|U(T_{1})|\phi(t)}\\
+												&=\braket{\phi(t)|U^{\dagger}(T_{1})U(T_{1})|\phi(t)} = \mathbb{1}
+\end{aligned}
+\end{equation*}
+\paragraph{EPR paradox and Bell's inequality}%
+\label{par:epr_paradox_and_bell_s_inequality} \ \\ 
+\begin{itemize}
+	\item Perhaps, the most spectacular and counter-intuitive manifestation of quantum mechanics is the phenonmenon of entanglement observed in composite quantum system. 
+	\item According to quantum mechanics, and unobserved particle do not posses physical properties thate exist independent of observation (reality assumption). Rather, such physical arise as a consequence of measurement performed upon the system.
+	\item In early days of the development of quantum mechanics, many physicists rejected this view of Nature. The most prominent objector was Albert Einstein.
+\end{itemize}
 \end{document}
