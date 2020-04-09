@@ -188,6 +188,14 @@ INPUT ./1.png
 INPUT 2.png
 INPUT ./2.png
 INPUT ./2.png
+INPUT 3.png
+INPUT ./3.png
+INPUT ./3.png
+INPUT 4.png
+INPUT ./4.png
+INPUT ./4.png
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmbxti10.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmbxti10.tfm
 OUTPUT Lecture notes.thm
 INPUT Lecture notes.aux
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/bbold-type1/bbold10.pfb

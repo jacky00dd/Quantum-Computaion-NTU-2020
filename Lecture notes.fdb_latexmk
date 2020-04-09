@@ -1,6 +1,6 @@
 # Fdb version 3
-["pdflatex"] 1585215216 "Lecture notes.tex" "Lecture notes.pdf" "Lecture notes" 1585215216
-  "/dev/null" 1585202844 0 d41d8cd98f00b204e9800998ecf8427e ""
+["pdflatex"] 1586424660 "Lecture notes.tex" "Lecture notes.pdf" "Lecture notes" 1586424660
+  "/dev/null" 1586412146 0 d41d8cd98f00b204e9800998ecf8427e ""
   "/etc/texmf/web2c/texmf.cnf" 1572194759 475 c0e671620eb5563b2130f56340a5fde8 ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1511824771 3332 103109f5612ad95229751940c61aada0 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1246382020 1004 54797486969f23fa377b128694d548df ""
@@ -117,10 +117,12 @@
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1580723268 4263355 6f2c95936d31950d1e7646cbf386c4e0 ""
   "1.png" 1583998961 8949 17e4d7a69e28b9fa587ffcf889c82213 ""
   "2.png" 1584005037 30949 a1e81b809007bd8003dc454b8c37ebdc ""
-  "Lecture notes.aux" 1585215194 6178 4af3fd7ba0772c8ee7c392f47bcede2e "pdflatex"
-  "Lecture notes.tex" 1585215216 27146 08393e57b02fe7c278dc9ffb594b3fcf ""
+  "3.png" 1586417062 16495 5dd4806ed90f60b53df0eb528c494528 ""
+  "4.png" 1586422215 14166 c877d934e816155e7f0bc4d3cac05de8 ""
+  "Lecture notes.aux" 1586424656 6350 8cfb4134108937ae42d1bd6acb08c4cc "pdflatex"
+  "Lecture notes.tex" 1586424660 34974 1e7da28d6e7578b9caa8ff9fb90528d5 ""
   (generated)
-  "Lecture notes.aux"
-  "Lecture notes.log"
   "Lecture notes.thm"
   "Lecture notes.pdf"
+  "Lecture notes.aux"
+  "Lecture notes.log"

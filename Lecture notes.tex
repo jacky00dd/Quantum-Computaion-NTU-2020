@@ -655,5 +655,144 @@ The completeness condition:
 	\item Perhaps, the most spectacular and counter-intuitive manifestation of quantum mechanics is the phenonmenon of entanglement observed in composite quantum system. 
 	\item According to quantum mechanics, and unobserved particle do not posses physical properties thate exist independent of observation (reality assumption). Rather, such physical arise as a consequence of measurement performed upon the system.
 	\item In early days of the development of quantum mechanics, many physicists rejected this view of Nature. The most prominent objector was Albert Einstein.
+	\item 1935, Albert Einstein, Nathan Rosen, Boris Podolsky proposed a thought experiment which they believed demonstrated that QM is not a complete theory of Nature $\Rightarrow$ QM leads to a contradiction, provided that we accept the following two seemingly natural assumptions (that Nature ought to obey) \\
+		\textbf{(1) Reality principle:}  If we can predict with certainty the value of a physical quantity, then this value has physical reality, independent of observations. e.g. thennis ball, moon, color of a chalk \\
+		\textbf{(2) Locality principle:} If two system are causally disconnected, the result of any measurement performed one a system cannot influence the result of a measurement performed the second system.  \\ \\
+		\underline{\textbf{Theory of relativity:} } two events taking place at space-time coordinates $(x_{1},t_{1}), (x_{2},t_{2})$ respectively. The two events are disconnected if $(\Delta x)^{2} > (c\Delta t)^{2}$ (Space-like events). That is , physical influence cannot propagate fasten than light.
+	\item 1964, John Bell formulated inequality assuming the principle of realism and locality. Since it is possible to \textbf{devise situations} in which QM predicts a violation of these inequalities, any experimental observation of such a violation excludes the possibility of a local and realistic description of natural phenomena.
+\begin{remark}
+It turns out that Nature experimentally invalidates EPR's points of view, while agreeing with QM. To device Bell's inequality, we should forget about QM for a moment, and use the classical common sense notion of how the world works, the sort of notion EPR thought Nature ought to obey.
+\end{remark}
+	\item The thought experiment:
+\begin{figure}[h]
+	\centering
+	\includegraphics[scale = 0.3]{3.png}
+\end{figure}
+\begin{enumerate}
+	\item A source  that is capable of repeating the experimental procedure to prepare two particle.
+	\item Once tha particles are prepared, one particle is sent to A(lice) and the other to B(ob).
+	\item The timing of the experiment is arranged so that Alice and Bob do their measurements at the same time (or in a causally disconnected manner). 
+	\item Alice and Bob can measure the polarization along 3 different axes a,b,c.
+\end{enumerate}
+According to the reality principle, we may assign well defined values to the spin components along the three axes. That is, we assume that these values have physical reality independent of our observation. The result of the measurement of Alice and Bob are perfectly anti-correlated.\\
+\\
+\textbf{Classical intuitive example:} two balls (one black, one white), a pair of gloves (one left-handed, one right-handed)
+\begin{equation*}
+\begin{aligned}
+	Alice &&& Bob \\
+	\downarrow &&& \downarrow \\ 
+	white &&& black \\
+	(L) &&& (R) \\
+\end{aligned}
+\end{equation*}
+\begin{center}
+\textit{\textbf{Locality and Reality}}
+\end{center}
+The result are mutually exclusive groups:
+\begin{center}
+\begin{tabular}{|c|c|c|}
+	\hline
+	Population & Alice's particle & Bob's particle \\ 
+	\hline 
+	$N_{1}$ & $(a_{+},b_{+},c_{+})$ & $(a_{-},b_{-},c_{-})$ \\
+	\hline 
+	$N_{2}$ & $(a_{+},b_{+},c_{-})$ & $(a_{-},b_{-},c_{+})$ \\
+	\hline 
+	$N_{3}$ & $(a_{+},b_{-},c_{+})$ & $(a_{-},b_{+},c_{-})$ \\
+	\hline 
+	$N_{4}$ & $(a_{+},b_{-},c_{-})$ & $(a_{-},b_{+},c_{+})$ \\
+	\hline 
+	$N_{5}$ & $(a_{-},b_{+},c_{+})$ & $(a_{+},b_{-},c_{-})$ \\
+	\hline 
+	$N_{6}$ & $(a_{-},b_{+},c_{-})$ & $(a_{+},b_{-},c_{+})$ \\
+	\hline 
+	$N_{7}$ & $(a_{-},b_{-},c_{+})$ & $(a_{+},b_{+},c_{-})$ \\
+	\hline 
+	$N_{8}$ & $(a_{-},b_{-},c_{-})$ & $(a_{+},b_{+},c_{+})$ \\
+	\hline
+\end{tabular}
+\end{center}
+Let $P(a_{+},b_{+})$ denote the probability that Alice obtains $\sigma^{A}_{a}:+1$ and Bob obtains $\sigma^{B}_{b}:+1$
+\[
+	P(a_{+},b_{+}) = \frac{N_{3}+N_{4}}{N} \ \ \ P(a_{+},c_{+}) = \frac{N_{2}+N_{3}}{N} \ \ \ P(c_{+},b_{+}) = \frac{N_{3}+N_{7}}{N} 
+\] 
+\begin{equation*}
+\begin{aligned}
+	& N_{3}+N_{4} \leq (N_{2}+N_{4}) + (N_{3}+N_{7}) \\ 
+	\Rightarrow\ & P(a_{+},b_{+}) \leq P(a_{+},c_{+}) + P(c_{+},b_{+}) \textit{\ \ (Bell's inequality)}
+\end{aligned}
+\end{equation*}
+\textbf{Reality:} We can establish the above table. \\ \\
+\textbf{Locality:}
+If a pair belongs to group 1, and Alice's choose to measure $\sigma^{A}_{a}$, then she will certainly obtain outcome +1, i.e. $a_{+}$, independently of the fact that Bob may choose to perform a measurement along the axes a,b or c. \\
+\begin{center}
+\textit{\textbf{Quantum Theory}}
+\end{center}
+The state of one particle depends unpon the nature of the observable measured on the other particle.
+\[
+	\ket{\psi} = \frac{1}{\sqrt{2}}(\ket{01}-\ket{10}) = \frac{1}{\sqrt{2}}(\ket{+}\ket{-}-\ket{-}\ket{+})  = \frac{1}{\sqrt{2}}(\ket{+}_{n}\ket{-}_{n}-\ket{-}_{n}\ket{+}_{n}) 
+\] 
+If Alice finds $\sigma^{A}_{a}:+1$, then the state of Bob's particle collapses to the eigenstate of $\ket{-}_{a}$ \Rightarrow $\sigma^{B}_{b}$ with probability $\braket{\psi|P_{m}|\psi} = _{a}\braket{-|+}_{b} _{b}\braket{+|-}_{a}=\sin^{2}{\frac{\theta_{ab}}{2}}\ \Rightarrow\ P(a_{+},b_{+})=\frac{1}{2}\sin^{2}{\frac{\theta_{ab}}{2}}$ 
+\[
+	\sin^{2}{\frac{\theta_{ab}}{2}} \leq \sin^{2}{\frac{\theta_{ac}}{2}}+ \sin^{2}{\frac{\theta_{cb}}{2}}\ \ \textit{( Substite in Bell's inequality)}
+\] 
+If we choose $\theta_{ab} = 2\theta, \theta_{ac}=\theta_{cb}= \theta$, then the inequality becomes $\sin^{2}{\theta}\leq 2\sin^{2}{\frac{\theta}{2}}$. If $\theta = 60^{o} \Rightarrow \left(\frac{\sqrt{3}}{2}\right)^{2}\leq 2 \left(\frac{1}{2}\right)^{2}\Rightarrow \frac{3}{4}\leq \frac{2}{4}\ !!!!$ \textbf{The Quantum Mechanics will violate Bell's inequatlity.}\\
+	\item 1968, \textbf{CHSH(Clauser, Horne, Shimony and Holt) inequality.} (Example of a larger set of Bell's inequalities) \\
+\begin{figure}[h]
+	\centering
+	\includegraphics[scale = 0.3]{4.png}
+\end{figure}
+\\
+They do not decide which property she or he will measure. 
+\begin{center}
+\textit{\textbf{Reality and Locality}}
+\end{center}
+\textbf{Reality:} physical properties of $P_{Q},P_{R},P_{S},P_{T}$ have definite values Q,R,S,T which exist independent of observation. \\
+\\
+\textbf{Locality:} Timing of measurement $\Rightarrow$ Causally disconnected! The measurement which Alice performed cannot disturb the result of Bob's measurement (or vice versa). 
+\\ \\ 
+\[
+	QS+RS+RT-QT = (Q+R)S+(R-Q)T = \pm 2
+\] 
+\[
+	(Suppose\ R,Q = \pm 1.\ Thus,\ (R+Q)S=0\ or\ (R-Q)T=0)
+\] 
+\\
+Emsemble average:\ (The curly words mean operator)
+\[
+	E(\mathcal{QS+RS+RT-QT}) = \sum^{}_{} p(Q,R,S,T)(QS+RS+RT-QT) \leq \sum^{}_{} p(Q,R,S,T)\cdot2 = 2
+\] 
+\begin{center}
+\textit{\textbf{Quantum Theory}}
+\end{center}
+\[
+	E(\mathcal{QS+RS+RT-QT}) = \braket{\psi|\mathcal{QS+RS+RT-QT}|\psi} = \braket{\mathcal{QS}} + \braket{\mathcal{RS}} +\braket{\mathcal{RT}} - \braket{\mathcal{QT}} 
+\] 
+\begin{example}
+\[
+	\ket{\psi}=\frac{1}{\sqrt{2}}(\ket{01}-\ket{10})
+\] 
+\[
+Q=Z_{1}\ \ R=X_{1}\ \  S= \frac{-Z_{2}-X_{2}}{\sqrt{2}}\ \ T= \frac{Z_{2}-X_{2}}{\sqrt{2}}
+\] 
+\[
+\braket{\mathcal{QS}} + \braket{\mathcal{RS}}+ \braket{\mathcal{RT}} -\braket{\mathcal{QT}} = 2\sqrt{2} > 2 !!\textit{\textbf{ The Quantum Theory violates Bell's inequality.}}
+\] 
+\end{example}
+	\item 1981. \textit{Violation of CHSH inequality and an excellent agreement with QM}
+\begin{itemize}
+	\item Photon detection efficiency $\eta \approx 0.05 ~ 0.33$
+	\item Seperation between trapped ions $d\approx 1m$
+\end{itemize}
+	A loophole-free experiment will require.
+\begin{itemize}
+	\item Spacelike separation between Alice's and Bob's measurements (locality loophole)
+	\item Sufficient large number of detections of the prepared particles (detection loophole)
+\end{itemize}
+\begin{enumerate}
+	\item B.Hensen et al., Nature 528, 682 (2015)
+	\item M.Giustina et al. Physical Review Letters 115, 250401 (2015)
+	\item L.K.Shalin et al. Physical Review Letters 115, 250402 (2015)
+\end{enumerate}
 \end{itemize}
 \end{document}

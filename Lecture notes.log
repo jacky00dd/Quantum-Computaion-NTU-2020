@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2020.2.3)  26 MAR 2020 17:33
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2020.2.3)  9 APR 2020 17:31
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -834,27 +834,101 @@ Underfull \hbox (badness 10000) in paragraph at lines 653--655
 
  []
 
+
+Underfull \hbox (badness 10000) in paragraph at lines 658--662
+
+ []
+
+[10]
+<3.png, id=58, 398.23781pt x 225.09094pt>
+File: 3.png Graphic file (type png)
+<use 3.png>
+Package pdftex.def Info: 3.png  used on input line 669.
+(pdftex.def)             Requested size: 119.47226pt x 67.52779pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 677--680
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 724--728
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 724--728
+
+ []
+
+[11 <./3.png>]
+./Lecture notes.tex:735: Missing $ inserted.
+<inserted text> 
+                $
+l.735 ...e eigenstate of $\ket{-}_{a}$ \Rightarrow
+                                                   $\sigma^{B}_{b}$ with pro...
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+./Lecture notes.tex:735: Missing $ inserted.
+<inserted text> 
+                $
+l.735 ...tate of $\ket{-}_{a}$ \Rightarrow $\sigma
+                                                  ^{B}_{b}$ with probability...
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+./Lecture notes.tex:735: Double subscript.
+l.735 ...\psi|P_{m}|\psi} = _{a}\braket{-|+}_{b} _
+                                                  {b}\braket{+|-}_{a}=\sin^{...
+I treat `x_1_2' essentially like `x_1{}_2'.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 738--740
+
+ []
+
+<4.png, id=63, 520.94624pt x 179.16937pt>
+File: 4.png Graphic file (type png)
+<use 4.png>
+Package pdftex.def Info: 4.png  used on input line 743.
+(pdftex.def)             Requested size: 156.28508pt x 53.75122pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 750--754
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 750--754
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 750--754
+
+ []
+
+[12 <./4.png>]
 \tf@thm=\write3
 \openout3 = `"Lecture notes.thm"'.
 
-[10] (./Lecture notes.aux)
+ [13] (./Lecture notes.aux)
 
 LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 15409 strings out of 492609
- 280228 string characters out of 6131463
+ 15421 strings out of 492609
+ 280346 string characters out of 6131463
  346037 words of memory out of 5000000
- 19186 multiletter control sequences out of 15000+600000
- 542760 words of font info for 66 fonts, out of 8000000 for 9000
+ 19196 multiletter control sequences out of 15000+600000
+ 543478 words of font info for 68 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  47i,13n,65p,839b,410s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/bbold-type1/bbold10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/doublestroke/dsrom10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm7.pfb>
-Output written on "Lecture notes.pdf" (10 pages, 265370 bytes).
+Output written on "Lecture notes.pdf" (13 pages, 303407 bytes).
 PDF statistics:
- 118 PDF objects out of 1000 (max. 8388607)
- 82 compressed objects within 1 object stream
+ 132 PDF objects out of 1000 (max. 8388607)
+ 89 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 11 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 21 words of extra memory for PDF output out of 10000 (max. 10000000)
 
