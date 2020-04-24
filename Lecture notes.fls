@@ -115,6 +115,32 @@ INPUT /usr/share/texlive/texmf-dist/tex/latex/mathtools/mhsetup.sty
 INPUT /usr/share/texlive/texmf-dist/tex/latex/mathtools/mhsetup.sty
 INPUT /usr/share/texlive/texmf-dist/tex/latex/doublestroke/dsfont.sty
 INPUT /usr/share/texlive/texmf-dist/tex/latex/doublestroke/dsfont.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/qcircuit/qcircuit.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/qcircuit/qcircuit.sty
+INPUT /usr/share/texlive/texmf-dist/tex/generic/xypic/xy.sty
+INPUT /usr/share/texlive/texmf-dist/tex/generic/xypic/xy.sty
+INPUT /usr/share/texlive/texmf-dist/tex/generic/xypic/xy.tex
+INPUT /usr/share/texlive/texmf-dist/tex/generic/xypic/xyrecat.tex
+INPUT /usr/share/texlive/texmf-dist/tex/generic/xypic/xyidioms.tex
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/xypic/xydash10.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/xypic/xyatip10.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/xypic/xybtip10.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/xypic/xybsql10.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/xypic/xycirc10.tfm
+INPUT /usr/share/texlive/texmf-dist/tex/generic/xypic/xypdf.tex
+INPUT /usr/share/texlive/texmf-dist/tex/generic/xypic/xypdf.tex
+INPUT /usr/share/texlive/texmf-dist/tex/generic/xypic/xymatrix.tex
+INPUT /usr/share/texlive/texmf-dist/tex/generic/xypic/xymatrix.tex
+INPUT /usr/share/texlive/texmf-dist/tex/generic/xypic/xyframe.tex
+INPUT /usr/share/texlive/texmf-dist/tex/generic/xypic/xyframe.tex
+INPUT /usr/share/texlive/texmf-dist/tex/generic/xypic/xypdf-fr.tex
+INPUT /usr/share/texlive/texmf-dist/tex/generic/xypic/xycurve.tex
+INPUT /usr/share/texlive/texmf-dist/tex/generic/xypic/xycurve.tex
+INPUT /usr/share/texlive/texmf-dist/tex/generic/xypic/xypdf-cu.tex
+INPUT /usr/share/texlive/texmf-dist/tex/generic/xypic/xyarrow.tex
+INPUT /usr/share/texlive/texmf-dist/tex/generic/xypic/xyarrow.tex
+INPUT /usr/share/texlive/texmf-dist/tex/generic/xypic/xyarc.tex
+INPUT /usr/share/texlive/texmf-dist/tex/generic/xypic/xyarc.tex
 INPUT Lecture notes.aux
 INPUT Lecture notes.aux
 OUTPUT Lecture notes.aux
@@ -128,6 +154,18 @@ INPUT /usr/share/texlive/texmf-dist/tex/latex/graphics/trig.sty
 INPUT /usr/share/texlive/texmf-dist/tex/latex/graphics/trig.sty
 INPUT /usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
 INPUT /usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm
+INPUT /usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
+INPUT /usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam10.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam7.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam5.tfm
+INPUT /usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
+INPUT /usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm7.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm5.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmr17.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmbx12.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmr12.tfm
@@ -142,26 +180,14 @@ INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmsy6.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmex10.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm
-INPUT /usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
-INPUT /usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam10.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam10.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam7.tfm
-INPUT /usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
-INPUT /usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm7.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmr12.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmbx12.tfm
-INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm
-INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm
-INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam10.tfm
-INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam7.tfm
-INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam5.tfm
-INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10.tfm
-INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm7.tfm
-INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm5.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmbx12.tfm
 INPUT /usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
 INPUT /usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
@@ -196,6 +222,18 @@ INPUT ./4.png
 INPUT ./4.png
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmbxti10.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmbxti10.tfm
+INPUT 5.png
+INPUT ./5.png
+INPUT ./5.png
+INPUT 6.png
+INPUT ./6.png
+INPUT ./6.png
+INPUT 10.png
+INPUT ./10.png
+INPUT ./10.png
+INPUT 11.png
+INPUT ./11.png
+INPUT ./11.png
 OUTPUT Lecture notes.thm
 INPUT Lecture notes.aux
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/bbold-type1/bbold10.pfb

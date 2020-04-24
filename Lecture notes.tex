@@ -13,6 +13,7 @@
 \usepackage{ntheorem}
 \usepackage{commath,mathtools}
 \usepackage{dsfont}
+\usepackage{qcircuit}
 
 \newtheorem*{remark}{Remark}
 \newtheorem*{propos}{Proposition}
@@ -122,7 +123,6 @@ We ask the question: How much of \ref{IS:first} do I need to achieve \ref{IS:sec
 Pursuing this question in the quantum case has led to and presumably will continue to lead to interesting new information processing capability.
 \subsection{Knowing the rules of QM $\neq$ Understanding the QM}
 \paragraph{\textbf{What high-level principles are implied by QM?}}%
-\label{par:paragraph_name}
 \begin{center}
 	\textit{To discuss these high-level principles, we may need to know the basic rules of QM first.}\\
 \end{center}
@@ -131,7 +131,6 @@ QM has a fearsome popular image because the mathematics required to apply QM to 
 By contrast, the mathematics used in application to QIS is "relatively painless". Do not need to read the tranditional QM textbooks. Here, I mean the mathematics required to understand those algorithms protocols. However, the math for physical implementation and consideration of real world, noise and decoherence may be a little bit involved.\\
 
 \paragraph{\textbf{What is Quantum Mechanics?}}%
-\label{par:paragraph_name}
 \begin{center}
 	\textit{Is it a complete physical therory of the world in its own right? } No!! msiconception!!\\
 	It is a framework for the development of physical theory.
@@ -385,7 +384,6 @@ For arbitrary state, the expectation value $\braket{X}^{2}+\braket{Y}^{2}+\brake
 Since $\theta$ and $\phi$ are continuous, it seems that we can carry all information in $\theta$ and $\phi$. However, if we want to extract the probability of $\ket{0}$, we have to prepare "many" pure state. But the precision of the coefficient is related to how many pure state we observe. If we can do measurement infinitely, then we can get exact qunit.  
 \end{remark}
 \paragraph{Distinguishing Quantum States}%
-\label{par:paragraph_name}
 \ \\
 \\
 Distinguishibility: a set of states $\ket{\psi_{i}}$, $1 \leq i \leq n$ known to Alice and Bob. Alice choose a state $\ket{\psi_{i}}$ and gives it to Bob, whose task is to identify the index j of the state Alice has given him.
@@ -459,7 +457,6 @@ Suppose C and D are two obervables and $A=C-\braket{C}, B=D-\braket{D}$$\Rightar
 There is an intrinsic limit to the accureacy of the simultaneous measurement of both C and D if $[C,D]\neq 0.$ \\
 The measurement of one observable necessarily disturbs the other if $[C,D]\neq 0$
 \paragraph{Positive Operator-valued Measure (POVM) measurement}%
-\label{par:paragraph_name}
 \ \\
 \\
 \textbf{Positive operator:} A special subclass of Hermitian operators defined as for any vector $\ket{v}, \braket{v|A|v}$ is a real, non-negative numbers.\\
@@ -516,7 +513,7 @@ Two-qubit state space is $\mathbb{C}^{2}\otimes\mathbb{C}^{2}=\mathbb{C}^{4}$
 \ket{1} \otimes \ket{0} \\
 \ket{1} \otimes \ket{1} \\
 \end{cases}
-\end{equation}
+\end{equation*}
 100 qubits $2^{100}\approx 10^{30}$ memory!! Hilbert space is indeed a big place!
 \end{example}
 \begin{example}
@@ -528,9 +525,9 @@ Two-qubit state space is $\mathbb{C}^{2}\otimes\mathbb{C}^{2}=\mathbb{C}^{4}$
 \] 
 The first operator $\mathbb{1}$ acts on the first qubit space and the second one X acts on the second qubit space.  
 \end{example}
-\begin{Remark}
+\begin{remark}
 Through we can compute parallelly, we have to do many measurements to get the information of the amplitute. Thus, we often use interference to left the amplitute of interest and measure it.
-\end{Remark}
+\end{remark}
 \paragraph{Basic properties of tensor product under $\mathbb{V}\otimes\mathbb{W}$}%
 \label{par:basic_properties_of_tensor_product_under_votimesw_}
 \\
@@ -603,7 +600,7 @@ Bell\ state:\ \ket{\psi}=\frac{\ket{00}+\ket{11}}{\sqrt{2}}
 \] 
 If the state is separable:
 \[
-	\ket{\psi} = (\alpha\ket{0}+\beta\ket{1})\otimes(\gamma\ket{0}+\delta\ket{1_{)}}) = \alpha\gamma\ket{00}+\beta\gamma\ket{10}+\alpha\delta\ket{01}+\beta\delta\ket{11}
+	\ket{\psi} = (\alpha\ket{0}+\beta\ket{1})\otimes(\gamma\ket{0}+\delta\ket{1}) = \alpha\gamma\ket{00}+\beta\gamma\ket{10}+\alpha\delta\ket{01}+\beta\delta\ket{11}
 \] 
 \[
 \gamma\beta =  0 \  or \ \alpha\delta=0 \leftrightarrow \alpha\gamma =1 \ and \ \beta\delta = 1
@@ -620,10 +617,10 @@ Let the two system be coupled together fo a time $T_{1}$
 	U(T_1) = e^{-i\mathcal{H}T_{1}/\hbar} \ \ \ \mathcal{H}: total Hamiltonian 
 \] 
 \begin{equation*}
-\begin{align*}
+\begin{aligned}
 	\ket{\Psi(t+T_1)}&=U(T_{1})\ket{\psi(t)}\ket{\phi(t)}\\
 						  &= \sum^{}_{m} \beta_{m}(t)\ket{\psi_{m}(t)}\ket{\phi_{m}} 
-\end{align*}
+\end{aligned}
 \end{equation*}
 \[
 \ \ \ket{\phi_{m}}\ is\ the\ orthonomal\  basis,\ but\ \ket{\psi_{m}(t)}\ may\ not\ orthogonal. 
@@ -732,7 +729,7 @@ The state of one particle depends unpon the nature of the observable measured on
 \[
 	\ket{\psi} = \frac{1}{\sqrt{2}}(\ket{01}-\ket{10}) = \frac{1}{\sqrt{2}}(\ket{+}\ket{-}-\ket{-}\ket{+})  = \frac{1}{\sqrt{2}}(\ket{+}_{n}\ket{-}_{n}-\ket{-}_{n}\ket{+}_{n}) 
 \] 
-If Alice finds $\sigma^{A}_{a}:+1$, then the state of Bob's particle collapses to the eigenstate of $\ket{-}_{a}$ \Rightarrow $\sigma^{B}_{b}$ with probability $\braket{\psi|P_{m}|\psi} = _{a}\braket{-|+}_{b} _{b}\braket{+|-}_{a}=\sin^{2}{\frac{\theta_{ab}}{2}}\ \Rightarrow\ P(a_{+},b_{+})=\frac{1}{2}\sin^{2}{\frac{\theta_{ab}}{2}}$ 
+If Alice finds $\sigma^{A}_{a}:+1$, then the state of Bob's particle collapses to the eigenstate of $\ket{-}_{a}$ $\Rightarrow$ $\sigma^{B}_{b}$ with probability $\braket{\psi|P_{m}|\psi} = _{a}\braket{-|+}_{b} _{b}\braket{+|-}_{a}=\sin^{2}{\frac{\theta_{ab}}{2}}\ \Rightarrow\ P(a_{+},b_{+})=\frac{1}{2}\sin^{2}{\frac{\theta_{ab}}{2}}$ 
 \[
 	\sin^{2}{\frac{\theta_{ab}}{2}} \leq \sin^{2}{\frac{\theta_{ac}}{2}}+ \sin^{2}{\frac{\theta_{cb}}{2}}\ \ \textit{( Substite in Bell's inequality)}
 \] 
@@ -794,5 +791,377 @@ Q=Z_{1}\ \ R=X_{1}\ \  S= \frac{-Z_{2}-X_{2}}{\sqrt{2}}\ \ T= \frac{Z_{2}-X_{2}}
 	\item M.Giustina et al. Physical Review Letters 115, 250401 (2015)
 	\item L.K.Shalin et al. Physical Review Letters 115, 250402 (2015)
 \end{enumerate}
+	\item 1969, The CHSH Game  \\
+		\\
+		The game itself does not involved quantum mechanics, but quantum mechanics can help us win it. Alice and Bob are placed in separate rooms and are each given a challenge bit (x and y, respectively). The challenge bits are chosen uniformly at random, and indpendently of each other. Then Alice sends an answer bit $a$ back to the refree, and Bob sends back an answer bit $b$. Alice and Bob win the game iff
+\[
+	a+b = xy \mod2
+\] 
+So if either x or y is 0: a and b should be equal. But if x=y=1: a and b should be different. \\
+\\
+Alice and Bob are allowed to agree on a strategy in advance and to share random bits.
+\begin{center}
+\textbf{Classical Strategy}
+\end{center}
+The classical strategy to maximize winning probability simply that Alice and Bob always send the refree a=b=0 regardless of what x and y are. In this case, Alice and Bob win $75\%$ of the time, losing only if x and y are both 1. The Bell's inequality, in this framework, is just the slightly-boring statement that the maximum classical win probability in the CHSH game is $75\%$. 
+\begin{center}
+\textbf{Quantum Strategy}
+\end{center}
+If Alice and Bob had pre-shared Bell pair $\frac{\ket{00}+\ket{11}}{\sqrt{2}}=\frac{\ket{++}+\ket{--}}{\sqrt{2}}$, then there is a better strategy
+\begin{figure}[h]
+	\centering
+	\includegraphics[scale=0.5]{5.png}
+\end{figure}
+\[
+	\ket{\frac{\pi}{8}}=\cos{(\frac{\pi}{8})}\ket{0}+\sin{(\frac{\pi}{8})}\ket{0}
+\] 
+\[
+	\ket{+} = \cos{(\frac{\pi}{4})}\ket{0}+\sin{(\frac{\pi}{4})}\ket{1}
+\] 
+\[
+	\ket{-\frac{\pi}{8}}=\cos{(-\frac{\pi}{8})}\ket{0}+\sin{(-\frac{\pi}{8})}\ket{0}
+\] 
+The strategy:\\ \\
+If x = 0, Alice measure in $\{\ket{0},\ket{1}\}$ and if x = 1, Alice measure in $\{\ket{+},\ket{-}\}$.  She sets a to 0 if she measures $\ket{0}$ and $\ket{+}$ and 1 if she measures $\ket{1}$ or $\ket{-}$ \\
+If y = 0, Bob measure in $\{\ket{\frac{\pi}{8}},\ket{\frac{\pi}{8}+\frac{\pi}{2}}\}$ and if y = 1, Bob measure in $\{\ket{-\frac{\pi}{8}},\ket{-\frac{\pi}{8}+\frac{\pi}{2}}\}$. He sets b to 0 if he measures $\ket{\frac{\pi}{8}}$ or $\ket{-\frac{\pi}{8}}$ and 1 if otherwise.\\
+\\
+\textbf{Let's consider the case where Alice gets x=0 and measure $\ket{0}$.}\\ \\ She will output $a=0$, and she and Bob will win iff Bob outputs  $b=0$. Given that Alice measured her qubit already, Bob's qubit collapsed to the  $\ket{0}$ state. First suppose y = 0, Then Bob measures the state $\ket{0}$ in the  $\ket{\frac{\pi}{8}}$ basis. He outputs $b=0$ if he measure $\ket{\frac{\pi}{8}}$. Thus, the probability that Bob output 0 in this case is $|\braket{\frac{\pi}{8}|0}|^{2}=\cos^{2}{\frac{\pi}{8}}\approx 85\%$. For y = 1, Bob measure in $\ket{0}$ in $\ket{-\frac{\pi}{8}}$ basis. The probabiltiy that Bob output 0 in this case $\approx 85\%$ \\ \\
+\textbf{Consider the case where Alice gets x=1 and Bob gets y=1. Alice measure $\ket{-}$} \\ \\ She will output a = 1, and she and Bob will win iff Bob outputs b = 0. Given that Alice measured her qubit already, Bob's qubit collapsed to the  $\ket{-}$ state. Bob measure in $\ket{-}$ in $\ket{-\frac{\pi}{8}}$ basis. The probabiltiy that Bob output 0 in this case is still $|\braket{-|-\frac{\pi}{8}}|^{2}$ $\approx 85\%$ \\
+\item \textbf{Entanglement EPR steering and Bell's nonlocality}
+\begin{figure}[h]
+\centering
+\includegraphics[scale=0.4]{6.png}
+\end{figure}
+\begin{itemize}
+	\item Entanglement: non-seperable to product state
+	\item Bell's nonlocality: violation of Bell's inequality
+	\item Steering: Manipulate the other state.
+\end{itemize}
+\item \textbf{1982, No-cloning theorem }
+\begin{itemize}
+	\item Quantum mechanics does not allow the copying of arbitrary quantum state or no arbitrary copying by unitary transformation. \\
+	\item It is not possible to make a copy of an arbitrary unknown quantum state.
+\end{itemize}
+\begin{proof}
+Suppose we have a quantum machine $data\ slot\ \ket{\psi}$ and $target\ slot\ \ket{s}$
+\[
+\ket{\psi}\otimes\ket{s}\rightarrow U(\ket{\psi}\otimes\ket{s})=\ket{\psi}\otimes\ket{\psi}
+\] 
+Proof 1
+\[
+	U(\ket{\psi_{1}}\otimes\ket{\psi_{1}})=\ket{\psi_{1}}\otimes\ket{\psi_{1}}
+\] 
+\[
+	U(\ket{\psi_{2}}\otimes\ket{\psi_{1}})=\ket{\psi_{2}}\otimes\ket{\psi_{2}}
+\] 
+\[
+	U((\ket{\psi_{2}}+\ket{\psi_{1}})\otimes\ket{\psi_{1}})=(\ket{\psi_{2}}+\ket{\psi_{1}})\otimes (\ket{\psi_{2}}+\ket{\psi_{1}})
+\] 
+But
+\[
+	U((\ket{\psi_{2}}+\ket{\psi_{1}})\otimes\ket{\psi_{1}})=U(\ket{\psi_{1}}\otimes\ket{\psi_{1}}) + U(\ket{\psi_{2}}\otimes\ket{\psi_{1}}) = \ket{\psi_{1}}\otimes\ket{\psi_{1}}+\ket{\psi_{2}}\otimes\ket{\psi_{2}}\Leftrightarrow
+\] 
+Proof 2
+\[
+	U(\ket{\psi}\otimes\ket{s}) = \ket{\psi}\otimes \ket{\psi}
+\] 
+\[
+	U(\ket{\phi}\otimes\ket{s}) = \ket{\phi}\otimes \ket{\phi}
+\] 
+Take the inner product
+\[
+\braket{\psi|\phi}\braket{\psi|\phi}=\bra{\psi}\otimes\bra{s}U^{\dagger}U\ket{\phi}\otimes\ket{s} = \braket{\psi|\phi}\braket{s|s} = \braket{\psi|\phi}
+\] 
+So a cloning device can only clone states which are orthogonal to one another and therefore a general quantum cloning device is not possible. Hence, a potential quantum machine cannot clone both $\ket{\psi}=\ket{0}$ and $\ket{\phi}=\frac{\ket{0}+\ket{1}}{\sqrt{2}}$ since these states are not orthogonal.
+\end{proof}
+\end{itemize}
+\paragraph{Quantum Circuit Model}%
+\label{par:quantum_circuit_model}  \ \\
+\begin{equation*}
+\begin{aligned}
+	&\textit{Pauli gate}\ \ \ 
+	\Qcircuit @C=1.4em @R=0.7em{
+		& \gate{X} & \qw
+	}
+	\ \ \ X=\begin{pmatrix} 0&1\\1&0 \end{pmatrix}\  \ \
+	\Qcircuit @C=1.4em @R=0.7em{
+		& \gate{Y} & \qw		
+	}
+	\ \ \ Y = \begin{pmatrix} 0&-i\\i&0 \end{pmatrix}\ \ \ 
+	\Qcircuit @C=1.4em @R=0.7em{
+		& \gate{Z} & \qw 
+	}
+	\ \ \ Z = \begin{pmatrix} 1&0\\0&-1 \end{pmatrix} \\
+	&\textit{Hadamard gate} \ \ \ 
+	\Qcircuit @C=1.4em @R=0.7em{
+		& \gate{H} & \qw
+	}
+	\ \ \ H=\frac{1}{\sqrt{2}}\begin{pmatrix} 1&1\\1&-1 \end{pmatrix} =\frac{1}{\sqrt{2}}(Z+X)\ \ \ H\ket{0}=\frac{1}{\sqrt{2}}(\ket{0}+\ket{1})\ \ \ H\ket{1}=\frac{1}{\sqrt{2}}(\ket{0}-\ket{1})\\
+	&\textit{Phase gate}\ \ \ 
+	\Qcircuit @C=1.4em @R=0.7em{
+		& \gate{S} & \qw
+	}
+	\ \ \ S=\begin{pmatrix} 1&0\\0&i \end{pmatrix}\ \ \   
+	\textit{$\frac{\pi}{8}$ gate} \ \ \
+	\Qcircuit @C=1.4em @R=0.7em{
+		& \gate{T} & \qw
+	}
+	\ \ \ T=\begin{pmatrix} 1&0\\0&e^{i\frac{\pi}{4}} \end{pmatrix} \\
+\end{aligned}
+\end{equation*}
+\[
+	 X^{2}=Y^{2}=Z^{2}=H^{2}=I \ \ \ S^{2}=Z\ \ \ T^{2}=S
+\] 
+\textit{Rotation operator}
+\[
+	R_{\hat{n}}(\theta) = e^{-i\frac{\theta}{2}(\hat{n}\cdot \sigma )} = \cos{(\frac{\theta}{2})}I+\sin{(\frac{\theta}{2})}(\hat{n}\cdot \sigma)
+\] 
+\textit{Unitary single-qubit gate (Rotate qubit on Bloch's sphere)} 
+\[
+	\Qcircuit @C=1.4em @R=0.7em{
+		& \gate{U} & \qw
+	}\ \ \ 
+	U=e^{i\delta}R_{z}(\alpha)R_{y}(\gamma)R_{z}(\beta) = \begin{pmatrix} e^{i(\delta-\frac{\alpha}{2}-\frac{\beta}{2})}\cos{(\frac{\gamma}{2})}&-e^{i(\delta-\frac{\alpha}{2}+\frac{\beta}{2})}\sin{(\frac{\gamma}{2})}\\e^{i(\delta+\frac{\alpha}{2}-\frac{\beta}{2})}\sin{(\frac{\gamma}{2})}&e^{i(\delta+\frac{\alpha}{2}+\frac{\beta}{2})}\cos{(\frac{\gamma}{2})} \end{pmatrix} 
+\] 
+\textit{Transformation of gate}
+\begin{equation*}
+\begin{aligned}
+	&\Qcircuit @C=1.4em @R=0.7em{
+		& \gate{H} & \gate{X} & \gate{H} & \qw 
+	} \ \ \
+	HXH=\frac{1}{\sqrt{2}}(X+Z) X \frac{1}{\sqrt{2}}(X+Z) = \frac{1}{2}(X+Z+Z+ZXZ)=Z \\
+	&\Qcircuit @C=1.4em @R=0.7em{
+	& \gate{H} & \gate{Y} & \gate{H} & \qw
+	} \ \ \ 
+	HYH = \frac{1}{\sqrt{2}}(X+Z)Y\frac{1}{\sqrt{2}}(X+Z) = \frac{1}{2}(XYX + ZYX + XYZ + ZYZ) = -Y \\
+	&\Qcircuit @C=1.4em @R=0.7em{
+		& \gate{H} & \gate{Z} & \gate{H} & \qw 
+	} \ \ \
+	HZH=\frac{1}{\sqrt{2}}(X+Z) Z \frac{1}{\sqrt{2}}(X+Z) = \frac{1}{2}(XZX+X+Z+X)=X \\
+\end{aligned}
+\end{equation*}
+It can be verfied from commuation and anti-commutaion relation
+\[
+	\{\sigma_{i},\sigma_{j}\} = 2\delta_{ij}I \ \ \ [\sigma_{i},\sigma_{j}] = 2i\epsilon_{ijk}\sigma_{k}
+\] 
+\textbf{Two qubit gates} \\ \\
+\textit{\textbf{CNOT gate (controlled-not)}}
+\[
+\Qcircuit @C=1.4em @R=0.7em{
+	& \multigate{1}{CNOT} & \qw \\
+	& \ghost{CNOT} & \qw
+}
+\] 
+\\
+\[
+\Qcircuit @C=1.4em @R=0.0em @!R {
+	\lstick{Contorl\ bit}& \ctrl{2} & \qw &&& \ctrl{2} & \qw \\
+	&&&\push{\rule{0em}{0.0em}=\rule{0em}{0.0em}}&& \\
+	\lstick{Target\ bit}& \gate{X} & \qw &&& \targ & \qw\\
+}
+\] 
+\\
+\begin{equation*}
+\begin{aligned}
+\ket{00} \rightarrow \ket{00} \\
+\ket{01} \rightarrow \ket{01} \\
+\ket{10} \rightarrow \ket{11} \\
+\ket{11} \rightarrow \ket{10} \\
+\end{aligned}
+\ \ \ \ CNOT=\begin{pmatrix} 1&0&0&0\\0&1&0&0\\0&0&0&1\\0&0&1&0 \end{pmatrix} 
+\end{equation*}
+\\
+\[
+\Qcircuit @C=1.4em @R=0.7em{
+	\lstick{\ket{\psi}} & \ctrl{1} & \rstick{\ket{\psi}} \qw \\
+	\lstick{\ket{\phi}} & \targ & \rstick{\ket{(\psi+\phi) mod 2}} \qw 
+}
+\] 
+\\
+Thus, CNOT gate can reproduce $\ket{0}$ and $\ket{1}$
+\[
+\Qcircuit @C=1.4em @R=0.7em{
+	\lstick{\ket{\psi}} & \ctrl{1} & \rstick{\ket{\psi}} \qw \\
+	\lstick{\ket{0}} & \targ & \rstick{\ket{\psi}} \qw  
+}
+\] 
+\\
+CNOT gate combined with Hadamard gate can transform basis state into Bell state
+\[
+\Qcircuit @C=1.4em @R=0.7em{
+	\lstick{\ket{0}} & \gate{H} & \ctrl{1} & \rstick{\frac{1}{\sqrt{2}}(\ket{0}+\ket{1})} \qw \\
+	\lstick{\ket{0}} & \qw & \targ & \rstick{\ket{\psi}} \qw  
+}
+\] 
+Thus, we can not determined $\ket{\psi}$. $\ket{\psi}$ is entangled with control bit now
+\[
+	\ket{Control}\otimes \ket{Target} = \frac{1}{\sqrt{2}}(\ket{00}+\ket{11})
+\] 
+In general, if one of input state is superposed, the output will entangle. It can be computed by matrix.
+\[
+	\Qcircuit @C=1.4em @R=0.7em{
+		\lstick{\alpha\ket{0}+\beta\ket{1}} & \ctrl{1} & \rstick{?} \qw \\
+		\lstick{\gamma\ket{0}+r\ket{1}} & \targ & \rstick{?} \qw \\ 
+	}
+\] 
+\\
+\textit{\textbf{CZ gate (controlled-Z)}}
+\[
+\Qcircuit @C=1.4em @R=0.0em @!R { \lstick{Contorl\ bit}& \ctrl{2} & \qw &&& \gate{Z}   & \qw \\
+	&&&\push{\rule{0em}{0.0em}=\rule{0em}{0.0em}}&& \\
+	\lstick{Target\ bit}& \gate{Z} & \qw &&& \ctrl{-2}  & \qw\\
+}
+\] 
+\begin{equation*}
+\begin{aligned}
+	\ket{00} \rightarrow &\ket{00} \\
+\ket{01} \rightarrow &\ket{01} \\
+\ket{10} \rightarrow &\ket{10} \\
+\ket{11} \rightarrow &-\ket{11} \\
+\end{aligned}
+\ \ \ \ CZ=\begin{pmatrix} 1&0&0&0\\0&1&0&0\\0&0&1&0\\0&0&0&-1 \end{pmatrix} 
+\end{equation*}
+\\
+\\
+\textit{\textbf{Relation between CNOT and CZ gate}}
+\[
+\Qcircuit @C=1.4em @R=0.0em @!R { 
+	\lstick{Contorl\ bit}& \ctrl{2} & \qw &&& \qw & \ctrl{2} &\qw    & \qw \\
+								&&&\push{\rule{0em}{0.0em}=\rule{0em}{0.0em}}&&&& \\
+	\lstick{Target\ bit}& \gate{Z} & \qw &&& \gate{H} & \targ & \gate{H} & \qw\\
+}
+\] 
+\[
+\Qcircuit @C=1.4em @R=0.0em @!R { 
+	\lstick{Contorl\ bit}& \ctrl{2} & \qw &&& \qw & \ctrl{2} &\qw    & \qw \\
+								&&&\push{\rule{0em}{0.0em}=\rule{0em}{0.0em}}&&&& \\
+	\lstick{Target\ bit}& \targ  & \qw &&& \gate{H} & \gate{Z}  & \gate{H} & \qw\\
+}
+\] 
+\\
+\textbf{Classical computation} \\
+\\
+AND, OR, NAND, XOR, NOT \\
+\begin{figure}[h]
+\centering
+	\includegraphics[scale = 0.5]{10.png}
+\end{figure}
+\\
+Universal gate: NAND gate can be used to simulate the AND, OR, XOR and NOT gate, provided wires ancilla bits and Fanout are available.\\
+\begin{figure}[h]
+\centering
+	\includegraphics[scale = 0.5]{11.png}
+\end{figure}
+\newpage
+\ \\
+\textit{1961, Rolf Landauer: Only process in a computation which are irreversible are those which erase information. Any irreversible operation in a computation is necessarily accompanied by heat dissipation into the environment.} \\
+\\
+Erasing one bit $\Rightarrow$ reducing the number of state by a factor of 2 $\Rightarrow$ reduce the entropy of the computer by $k_{B}\ln{2}$ $\Rightarrow$ the entropy of the entire universe cannot decrease $\Delta S_{computer}=-k_{B}\ln{2}$ $\Rightarrow$ $\Delta S_{rest}\geq k_{B}\ln{2}$
+\[
+	\Delta Q_{rest}=T\Delta S_{rest} = k_{B}T\ln{2}
+\] 
+\textit{1973, Chales Bennett, main trick to computer using only reversible circuit elements by embedding the gate in a larger reversible gate, possibly making use of some extra ancilla bits.} \\
+\\
+\textit{1982, Ed Fredkin\& Tom Toffoli showed independently the way to bulid reversible computation. By avoiding to erase information, one creates and also must carry along a signigicant amount of redundancy.} \\
+\\
+The information processing by any classical NAND logical gate can be replaced by a Toffoli gate and the ability to prepared and ancilla bit. \textbf{Toffoli gate is universal for classical computation}. \\
+\\
+\textbf{Universal quantum gates}
+\begin{enumerate}
+	\item Single-qubit gates (arbitrary rotations two orthogonal axes) and CNOT gates (arbitrary entangling gate)
+	\item A discrete set of universal operation Hadomard gate, $\frac{\pi}{8}$ gate and CNOT gate. H \& $\frac{\pi}{8}$ gates can be used to approximate any single qubit unitary operation to arbitrary accuracy. (+ phase gate S: Fault-tolerant gate set. Quantum state is much more fragile than classical memory) 
+\end{enumerate}
+Fault-tolerant QC: In principle, an arbitrarily long QC can be performed reliably provided that the average probability of error per gate is less than a certain critical value (the accuracy/error threshold, which depending on the choice of error correction code (ECC)) \\ \\
+\textbf{Two qubit gate decomposition} \\
+where $ABC = I$ and $U=e^{i\delta}AXBXC$. \\
+For single qubit state
+\[
+	U = e^{i\delta}R_{z}(\alpha)R_{y}(\gamma)R_{z}(\beta)
+\] 
+Let
+\[
+	A = R_{z}(\alpha)R_{y}(\frac{\gamma}{2}) \ \ \ B=R_{y}(-\frac{\gamma}{2})R_{z}(-\frac{\alpha+\beta}{2})\ \ \ C=R_{z}(\frac{\beta-\alpha}{2})
+\] 
+From $XYX=-Y \Rightarrow X R_{y}(\theta)X = R_{y}(-\theta)$, thus,
+\[
+	XBX = XR_{y}(-\frac{\gamma}{2})XXR_{z}(-\frac{\alpha+\beta}{2}) X = R_{y}(\frac{\gamma}{2})R_{z}(\frac{\alpha+\beta}{2})
+\] 
+Thus,
+\[
+	AXBXC = R_{z}(\alpha)R_{y}(\gamma)R_{z}(\beta)
+\] 
+
+\begin{equation*}
+\begin{aligned}
+\ket{00} &\rightarrow \ket{00} \\
+\ket{01} &\rightarrow \ket{01} \\
+\ket{10} &\rightarrow e^{i\delta}\ket{10} \\
+\ket{11} &\rightarrow e^{i\delta}\ket{11} \\
+\end{aligned}
+\end{equation*}
+If control qubit $\ket{0}$ : Nothing happan(LHS), ABC = I (RHS) \\
+If control qubit $\ket{1}$ : U(LHS) , $e^{i\delta}AXBXC$(RHS) \\
+\\
+\textbf{Three qubit gate decomposition} \\
+\[
+U = V^{2}
+\] 
+Show
+\begin{equation*}
+\begin{aligned}
+\ket{00i_{3}} &\rightarrow \ket{00i_{3}} \\
+\ket{01i_{3}} &\rightarrow \ket{01i_{3}} \\
+\ket{10i_{3}} &\rightarrow \ket{10i_{3}} \\
+\ket{11i_{3}} &\rightarrow \ket{11}U\ket{i_{3}} \\
+\end{aligned}
+\end{equation*}
+RHS
+\begin{equation*}
+\begin{aligned}
+	\ket{00i_{3}} \rightarrow& \ket{00i_{3}}\rightarrow& \ket{00i_{3}}\rightarrow& \ket{00i_{3}}\rightarrow& \ket{00i_{3}}\rightarrow& \ket{00i_{3}} \\
+	\ket{01i_{3}} \rightarrow& \ket{01}V\ket{i_{3}}\rightarrow& \ket{01}V\ket{i_{3}}\rightarrow& \ket{01}V^{\dagger}V\ket{i_{3}}\rightarrow& \ket{01i_{3}}\rightarrow& \ket{01i_{3}} \\
+	\ket{10i_{3}} \rightarrow& \ket{10i_{3}}\rightarrow& \ket{11i_{3}}\rightarrow& \ket{11}V^{\dagger}\rightarrow& \ket{10}V^{\dagger}\ket{i_{3}} \rightarrow& \ket{10}VV^{\dagger}\ket{i_{3}} \\
+	\ket{11i_{3}} \rightarrow& \ket{11}V\ket{i_{3}} \rightarrow&\ket{10}V\ket{i_{3}}\rightarrow& \ket{10}V\ket{i_{3}}\rightarrow&\ket{11}V\ket{i_{3}}\rightarrow&\ket{11}V^{2}\ket{i_{3}} \\
+\end{aligned}
+\end{equation*}
+\textbf{GHZ(Greenberg, Horne, Zeilinger) state} 
+\[
+	\frac{1}{\sqrt{2}}(\ket{000}+\ket{111})
+\] 
+Transform the computational basis state to the Bell states \\
+Transform the Bell states to the computational basis state
+\begin{equation*}
+\begin{aligned}
+	\ket{00} &\rightarrow \frac{1}{\sqrt{2}}(\ket{0}+\ket{1})\ket{0} = \frac{1}{\sqrt{2}}(\ket{00}+\ket{10}) &\rightarrow \frac{1}{\sqrt{2}}(\ket{00}+\ket{11}) = \ket{\phi^{+}} \\
+	\ket{01} &\rightarrow \frac{1}{\sqrt{2}}(\ket{0}+\ket{1})\ket{1} = \frac{1}{\sqrt{2}}(\ket{01}+\ket{11}) &\rightarrow \frac{1}{\sqrt{2}}(\ket{01}+\ket{10}) = \ket{\psi^{+}} \\
+	\ket{10} &\rightarrow \frac{1}{\sqrt{2}}(\ket{0}-\ket{1})\ket{0} = \frac{1}{\sqrt{2}}(\ket{00}-\ket{10}) &\rightarrow \frac{1}{\sqrt{2}}(\ket{00}-\ket{11}) = \ket{\phi^{-}} \\
+	\ket{11} &\rightarrow \frac{1}{\sqrt{2}}(\ket{0}-\ket{1})\ket{1} = \frac{1}{\sqrt{2}}(\ket{01}-\ket{11}) &\rightarrow \frac{1}{\sqrt{2}}(\ket{01}-\ket{10}) = \ket{\psi^{-}} \\
+\end{aligned}
+\end{equation*}
+\textbf{Key elements of quantum circuit model}
+\begin{enumerate}
+	\item Classical resources
+	\item A suitable state space 
+	\item Ability to prepare states in the computational basis
+	\item Ability to perform quantum gates
+	\item Ability to perform measurements in the computational basis
+\end{enumerate}
+\begin{center}
+\ \\ \\ \\
+\textbf{Application}
+\end{center}
+\textbf{Superdense coding} \\
+\\
+\textit{Q: Can Alice transmit 2 classical bits of information to Bob by sending him only one qubit?}\\
+\\
+Case I\\
+If the qubit has never been contacted with the rest of the world, i.e. isolated qubit, then the answer to this question is "No!" $\ket{\psi}=\alpha\ket{0}+\beta\ket{1}$ could be tempted to say that single qubitcould store infinite amount of information $\alpha, \beta$. But there is a catch to extract information we must perform measurement. Infinitely many measurements on identically prepared single-qubit states are required to obtain $\alpha$ and $\beta$. Not possible to transmit more than one classical bit of information per qubit. \\
+\\
+Case II\\
+Superdense coding protocol enables something similar to be done. (\textbf{Key: quantum entanglement})
+\begin{itemize}
+	\item A source generate an EPR(Bell) state pair shared by Alice and Bob.
+	\item Alice applies a local operation (determined by the two classical bits of information $i_{1}i_{2}$) to her single qubit which changes the joint state of the pair.
+	\item Alice then sends her qubit o Bob, who is now able to perform a measurement on the pair, which reveals the values of $i_{1}i_{2}$
 \end{itemize}
 \end{document}

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2020.2.3)  9 APR 2020 17:31
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2020.2.3)  24 APR 2020 23:41
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -517,38 +517,101 @@ LaTeX Info: Thecontrolsequence`\]'isalreadyrobust on input line 129.
 \l_MT_below_shortintertext_sep=\dimen165
 ) (/usr/share/texlive/texmf-dist/tex/latex/doublestroke/dsfont.sty
 Package: dsfont 1995/08/01 v0.1 Double stroke roman fonts
-)
-\c@remark=\count276
-\c@propos=\count277
-\c@example=\count278
-\c@definition=\count279
-\c@theorem=\count280
-\c@postu=\count281
- (./Lecture notes.aux
+) (/usr/share/texlive/texmf-dist/tex/latex/qcircuit/qcircuit.sty
+Package: qcircuit 2018/08/14
+ (/usr/share/texlive/texmf-dist/tex/generic/xypic/xy.sty (/usr/share/texlive/texmf-dist/tex/generic/xypic/xy.tex Bootstrap'ing: catcodes, docmode, (/usr/share/texlive/texmf-dist/tex/generic/xypic/xyrecat.tex) (/usr/share/texlive/texmf-dist/tex/generic/xypic/xyidioms.tex)
 
-LaTeX Warning: Label `par:paragraph_name' multiply defined.
+ Xy-pic version 3.8.9 <2013/10/06>
+ Copyright (c) 1991-2013 by Kristoffer H. Rose <krisrose@tug.org> and others
+ Xy-pic is free software: see the User's Guide for details.
 
-
-LaTeX Warning: Label `par:paragraph_name' multiply defined.
-
-
-LaTeX Warning: Label `par:paragraph_name' multiply defined.
-
-)
+Loading kernel: messages; fonts; allocations: state,
+\X@c=\dimen166
+\Y@c=\dimen167
+\U@c=\dimen168
+\D@c=\dimen169
+\L@c=\dimen170
+\R@c=\dimen171
+\Edge@c=\toks46
+\X@p=\dimen172
+\Y@p=\dimen173
+\U@p=\dimen174
+\D@p=\dimen175
+\L@p=\dimen176
+\R@p=\dimen177
+\Edge@p=\toks47
+\X@origin=\dimen178
+\Y@origin=\dimen179
+\X@xbase=\dimen180
+\Y@xbase=\dimen181
+\X@ybase=\dimen182
+\Y@ybase=\dimen183
+\X@min=\dimen184
+\Y@min=\dimen185
+\X@max=\dimen186
+\Y@max=\dimen187
+\lastobjectbox@=\box54
+\zerodotbox@=\box55
+\almostz@=\dimen188
+ direction,
+\d@X=\dimen189
+\d@Y=\dimen190
+\K@=\count276
+\KK@=\count277
+\Direction=\count278
+\K@dXdY=\dimen191
+\K@dYdX=\dimen192
+\xyread@=\read2
+\xywrite@=\write3
+\csp@=\count279
+\quotPTK@=\dimen193
+ utility macros; pictures: \xy, positions,
+\swaptoks@@=\toks48
+\connectobjectbox@@=\box56
+ objects,
+\styletoks@=\toks49
+ decorations; kernel objects: directionals, circles, text; options; algorithms: directions, edges, connections;  Xy-pic loaded)
+Package: xy 2013/10/06 Xy-pic version 3.8.9
+ (/usr/share/texlive/texmf-dist/tex/generic/xypic/xypdf.tex  Xy-pic option: PDF driver v.1.7 loaded)) (/usr/share/texlive/texmf-dist/tex/generic/xypic/xymatrix.tex  Xy-pic option: Matrix feature v.3.14
+\Row=\count280
+\Col=\count281
+\queue@=\toks50
+\queue@@=\toks51
+\qcount@=\count282
+\qcount@@=\count283
+\matrixsize@=\count284
+ loaded) (/usr/share/texlive/texmf-dist/tex/generic/xypic/xyframe.tex  Xy-pic option: Frame and Bracket extension v.3.14 loaded) Xy-pic pdf driver: `frame' extension support (/usr/share/texlive/texmf-dist/tex/generic/xypic/xypdf-fr.tex (/usr/share/texlive/texmf-dist/tex/generic/xypic/xycurve.tex  Xy-pic option: Curve and Spline extension v.3.12 curve,
+\crv@cnt@=\count285
+\crvpts@=\toks52
+\splinebox@=\box57
+\splineval@=\dimen194
+\splinedepth@=\dimen195
+\splinetol@=\dimen196
+\splinelength@=\dimen197
+ circles,
+\L@=\dimen198
+ loaded) Xy-pic pdf driver: `curve' extension support (/usr/share/texlive/texmf-dist/tex/generic/xypic/xypdf-cu.tex loaded) loaded) (/usr/share/texlive/texmf-dist/tex/generic/xypic/xyarrow.tex  Xy-pic option: Arrow and Path feature v.3.9 path, \ar, loaded) (/usr/share/texlive/texmf-dist/tex/generic/xypic/xyarc.tex  Xy-pic option: Circle, Ellipse, Arc feature v.3.8 circles, ellipses, elliptical arcs, loaded))
+\c@remark=\count286
+\c@propos=\count287
+\c@example=\count288
+\c@definition=\count289
+\c@theorem=\count290
+\c@postu=\count291
+ (./Lecture notes.aux)
 \openout1 = `"Lecture notes.aux"'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 25.
-LaTeX Font Info:    ... okay on input line 25.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 25.
-LaTeX Font Info:    ... okay on input line 25.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 25.
-LaTeX Font Info:    ... okay on input line 25.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 25.
-LaTeX Font Info:    ... okay on input line 25.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 25.
-LaTeX Font Info:    ... okay on input line 25.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 25.
-LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -584,20 +647,20 @@ LaTeX Font Info:    ... okay on input line 25.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-\AtBeginShipoutBox=\box54
+\AtBeginShipoutBox=\box58
 (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count282
-\scratchdimen=\dimen166
-\scratchbox=\box55
-\nofMPsegments=\count283
-\nofMParguments=\count284
-\everyMPshowfont=\toks46
-\MPscratchCnt=\count285
-\MPscratchDim=\dimen167
-\MPnumerator=\count286
-\makeMPintoPDFobject=\count287
-\everyMPtoPDFconversion=\toks47
+\scratchcounter=\count292
+\scratchdimen=\dimen199
+\scratchbox=\box59
+\nofMPsegments=\count293
+\nofMParguments=\count294
+\everyMPshowfont=\toks53
+\MPscratchCnt=\count295
+\MPscratchDim=\dimen256
+\MPnumerator=\count296
+\makeMPintoPDFobject=\count297
+\everyMPtoPDFconversion=\toks54
 ) (/usr/share/texlive/texmf-dist/tex/latex/graphics/graphicx.sty
 Package: graphicx 2017/06/01 v1.1a Enhanced LaTeX Graphics (DPC,SPQR)
  (/usr/share/texlive/texmf-dist/tex/latex/graphics/graphics.sty
@@ -609,8 +672,8 @@ File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
 )
 Package graphics Info: Driver file: pdftex.def on input line 99.
 )
-\Gin@req@height=\dimen168
-\Gin@req@width=\dimen169
+\Gin@req@height=\dimen257
+\Gin@req@width=\dimen258
 )
 LaTeX Font Info:    Try loading font information for U+msa on input line 26.
  (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
@@ -620,25 +683,27 @@ LaTeX Font Info:    Try loading font information for U+msb on input line 26.
  (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-Underfull \hbox (badness 10000) in paragraph at lines 29--33
+Package xypdf Info: Line width: 0.39998pt on input line 26.
+
+Underfull \hbox (badness 10000) in paragraph at lines 30--34
 
  []
 
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 51.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 52.
 (/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 51.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 52.
  [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
-Underfull \hbox (badness 10000) in paragraph at lines 104--106
+Underfull \hbox (badness 10000) in paragraph at lines 105--107
 
  []
 
 [2]
-Underfull \hbox (badness 10000) in paragraph at lines 119--123
+Underfull \hbox (badness 10000) in paragraph at lines 120--124
 
  []
 
@@ -655,187 +720,135 @@ Underfull \hbox (badness 10000) in paragraph at lines 129--132
 [3]
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 169.
-LaTeX Font Info:    Try loading font information for U+bbold on input line 181.
+(mdframed)              on input line 168.
+LaTeX Font Info:    Try loading font information for U+bbold on input line 180.
  (/usr/share/texlive/texmf-dist/tex/latex/bbold/Ubbold.fd)
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 213.
+(mdframed)              on input line 212.
 
-Underfull \hbox (badness 10000) in paragraph at lines 226--227
+Underfull \hbox (badness 10000) in paragraph at lines 225--226
 
  []
 
-LaTeX Font Info:    Try loading font information for U+dsrom on input line 243.
+LaTeX Font Info:    Try loading font information for U+dsrom on input line 242.
 (/usr/share/texlive/texmf-dist/tex/latex/doublestroke/Udsrom.fd
 File: Udsrom.fd 1995/08/01 v0.1 Double stroke roman font definitions
 )
 <1.png, id=22, 382.42876pt x 144.54pt>
 File: 1.png Graphic file (type png)
 <use 1.png>
-Package pdftex.def Info: 1.png  used on input line 251.
+Package pdftex.def Info: 1.png  used on input line 250.
 (pdftex.def)             Requested size: 191.2139pt x 72.2698pt.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 294.
-Package mdframed Info: Not enough space on this page on input line 304.
+(mdframed)              on input line 293.
+Package mdframed Info: Not enough space on this page on input line 303.
  [4 <./1.png>]
-Package mdframed Info: Not enough space on this page on input line 304.
+Package mdframed Info: Not enough space on this page on input line 303.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 305.
+(mdframed)              on input line 304.
 LaTeX Font Info:    Font shape `OMS/cmr/m/it' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 334.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 333.
  [5]
 <2.png, id=38, 803.0pt x 854.19125pt>
 File: 2.png Graphic file (type png)
 <use 2.png>
-Package pdftex.def Info: 2.png  used on input line 366.
+Package pdftex.def Info: 2.png  used on input line 365.
 (pdftex.def)             Requested size: 80.3047pt x 85.42412pt.
 
 
-./Lecture notes.tex:382: LaTeX Error: There's no line here to end.
+./Lecture notes.tex:381: LaTeX Error: There's no line here to end.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.382 \[
+l.381 \[
         
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 389--393
+Underfull \hbox (badness 10000) in paragraph at lines 387--391
 
  []
 
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 399.
+(mdframed)              on input line 397.
 
-Underfull \hbox (badness 10000) in paragraph at lines 403--406
+Underfull \hbox (badness 10000) in paragraph at lines 401--404
 
  []
 
 [6 <./2.png>]
-Overfull \hbox (32.07721pt too wide) in paragraph at lines 424--426
+Overfull \hbox (32.07721pt too wide) in paragraph at lines 422--424
 \OT1/cmr/m/it/10 From pos-tu-late of pro-jec-tive mea-sure-ment, $\OML/cmm/m/it/10 M[] \OT1/cmr/m/n/10 = \OML/cmm/m/it/10 M[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 Hermition\OT1/cmr/m/n/10 )$ \OT1/cmr/m/it/10 and $\OML/cmm/m/it/10 M[]M[] \OT1/cmr/m/n/10 = \OML/cmm/m/it/10 M[]^^N[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 OrthogonalProjector\OT1/cmr/m/n/10 )$
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 429--432
+Underfull \hbox (badness 10000) in paragraph at lines 427--430
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 463--470
+Underfull \hbox (badness 10000) in paragraph at lines 460--467
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 463--470
+Underfull \hbox (badness 10000) in paragraph at lines 460--467
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 463--470
+Underfull \hbox (badness 10000) in paragraph at lines 460--467
 
  []
 
 [7]
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 493.
+(mdframed)              on input line 490.
 
 
-./Lecture notes.tex:519: LaTeX Error: \begin{equation*} on input line 502 ended by \end{equation}.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.519 \end{equation}
-                    
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-./Lecture notes.tex:531: LaTeX Error: Environment Remark undefined.
+./Lecture notes.tex:534: LaTeX Error: There's no line here to end.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.531 \begin{Remark}
-                    
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-./Lecture notes.tex:533: LaTeX Error: \begin{document} ended by \end{Remark}.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.533 \end{Remark}
-                  
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-./Lecture notes.tex:537: LaTeX Error: There's no line here to end.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.537 \begin
+l.534 \begin
             {enumerate}
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 540--541
+Underfull \hbox (badness 10000) in paragraph at lines 537--538
 
  []
 
 [8]
-Underfull \hbox (badness 10000) in paragraph at lines 610--612
+Underfull \hbox (badness 10000) in paragraph at lines 607--609
 
  []
 
 [9]
-Underfull \hbox (badness 10000) in paragraph at lines 613--615
+Underfull \hbox (badness 10000) in paragraph at lines 610--612
 
  []
 
 
-./Lecture notes.tex:626: Package amsmath Error: Erroneous nesting of equation structures;
-(amsmath)                trying to recover with `aligned'.
-
-See the amsmath package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.626 \end{align*}
-                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 653--655
+Underfull \hbox (badness 10000) in paragraph at lines 650--652
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 658--662
+Underfull \hbox (badness 10000) in paragraph at lines 655--659
 
  []
 
@@ -843,92 +856,281 @@ Underfull \hbox (badness 10000) in paragraph at lines 658--662
 <3.png, id=58, 398.23781pt x 225.09094pt>
 File: 3.png Graphic file (type png)
 <use 3.png>
-Package pdftex.def Info: 3.png  used on input line 669.
+Package pdftex.def Info: 3.png  used on input line 666.
 (pdftex.def)             Requested size: 119.47226pt x 67.52779pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 677--680
+Underfull \hbox (badness 10000) in paragraph at lines 674--677
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 724--728
+Underfull \hbox (badness 10000) in paragraph at lines 721--725
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 724--728
+Underfull \hbox (badness 10000) in paragraph at lines 721--725
 
  []
 
 [11 <./3.png>]
-./Lecture notes.tex:735: Missing $ inserted.
-<inserted text> 
-                $
-l.735 ...e eigenstate of $\ket{-}_{a}$ \Rightarrow
-                                                   $\sigma^{B}_{b}$ with pro...
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-./Lecture notes.tex:735: Missing $ inserted.
-<inserted text> 
-                $
-l.735 ...tate of $\ket{-}_{a}$ \Rightarrow $\sigma
-                                                  ^{B}_{b}$ with probability...
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-./Lecture notes.tex:735: Double subscript.
-l.735 ...\psi|P_{m}|\psi} = _{a}\braket{-|+}_{b} _
+./Lecture notes.tex:732: Double subscript.
+l.732 ...\psi|P_{m}|\psi} = _{a}\braket{-|+}_{b} _
                                                   {b}\braket{+|-}_{a}=\sin^{...
 I treat `x_1_2' essentially like `x_1{}_2'.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 738--740
+Underfull \hbox (badness 10000) in paragraph at lines 735--737
 
  []
 
 <4.png, id=63, 520.94624pt x 179.16937pt>
 File: 4.png Graphic file (type png)
 <use 4.png>
-Package pdftex.def Info: 4.png  used on input line 743.
+Package pdftex.def Info: 4.png  used on input line 740.
 (pdftex.def)             Requested size: 156.28508pt x 53.75122pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 750--754
+Underfull \hbox (badness 10000) in paragraph at lines 747--751
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 750--754
+Underfull \hbox (badness 10000) in paragraph at lines 747--751
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 750--754
+Underfull \hbox (badness 10000) in paragraph at lines 747--751
 
  []
 
 [12 <./4.png>]
-\tf@thm=\write3
-\openout3 = `"Lecture notes.thm"'.
+Underfull \hbox (badness 10000) in paragraph at lines 794--797
 
- [13] (./Lecture notes.aux)
+ []
 
-LaTeX Warning: There were multiply-defined labels.
 
- ) 
+Underfull \hbox (badness 10000) in paragraph at lines 799--803
+
+ []
+
+<5.png, id=68, 190.46156pt x 190.46156pt>
+File: 5.png Graphic file (type png)
+<use 5.png>
+Package pdftex.def Info: 5.png  used on input line 813.
+(pdftex.def)             Requested size: 95.23053pt x 95.23053pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 823--830
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 823--830
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 823--830
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 823--830
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 823--830
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 823--830
+
+ []
+
+[13]
+<6.png, id=73, 424.58624pt x 312.41719pt>
+File: 6.png Graphic file (type png)
+<use 6.png>
+Package pdftex.def Info: 6.png  used on input line 833.
+(pdftex.def)             Requested size: 169.83148pt x 124.96465pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 842--843
+
+ []
+
+[14 <./5.png> <./6.png>]
+./Lecture notes.tex:876: Missing { inserted.
+<to be read again> 
+                   }
+l.876 \end{proof}
+                 
+A left brace was mandatory here, so I've put one in.
+You might want to delete and/or insert some corrections
+so that I will find a matching right brace soon.
+(If you're confused by all this, try typing `I}' now.)
+
+./Lecture notes.tex:876: Missing } inserted.
+<inserted text> 
+                }
+l.876 \end{proof}
+                 
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 879--880
+
+ []
+
+<xymatrix 3x1 143> <xymatrix 3x1 143> <xymatrix 3x1 143> <xymatrix 3x1 143> <xymatrix 3x1 143> <xymatrix 3x1 143>
+Overfull \hbox (17.20514pt too wide) detected at line 911
+[][]
+ []
+
+<xymatrix 3x1 143> <xymatrix 5x1 341> <xymatrix 5x1 341> <xymatrix 5x1 341>
+Underfull \hbox (badness 10000) in paragraph at lines 946--949
+
+ []
+
+<xymatrix 3x2 242> [15]
+Underfull \hbox (badness 10000) in paragraph at lines 954--956
+
+ []
+
+<xymatrix 7x3 483>
+Underfull \hbox (badness 10000) in paragraph at lines 962--964
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 972--974
+
+ []
+
+<xymatrix 3x2 196> <xymatrix 3x2 196> <xymatrix 4x2 333> <xymatrix 3x2 196> <xymatrix 7x3 544>
+Underfull \hbox (badness 10000) in paragraph at lines 1023--1027
+
+ []
+
+<xymatrix 9x3 765> <xymatrix 9x3 765> [16]
+<10.png, id=85, 369.54556pt x 239.9066pt>
+File: 10.png Graphic file (type png)
+<use 10.png>
+Package pdftex.def Info: 10.png  used on input line 1047.
+(pdftex.def)             Requested size: 184.77232pt x 119.953pt.
+<11.png, id=86, 408.52625pt x 510.90875pt>
+File: 11.png Graphic file (type png)
+<use 11.png>
+Package pdftex.def Info: 11.png  used on input line 1053.
+(pdftex.def)             Requested size: 204.26262pt x 255.45375pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 1040--1055
+
+ []
+
+[17 <./10.png (PNG copy)> <./11.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 1056--1060
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1062--1071
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1062--1071
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1062--1071
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1074--1078
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1101--1106
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1101--1106
+
+ []
+
+[18]
+
+./Lecture notes.tex:1150: LaTeX Error: There's no line here to end.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1150 \ \\ \\
+               \\
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+./Lecture notes.tex:1150: LaTeX Error: There's no line here to end.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1150 \ \\ \\ \\
+                 
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1153--1163
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1153--1163
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1153--1163
+
+ []
+
+[19]
+\tf@thm=\write4
+\openout4 = `"Lecture notes.thm"'.
+
+ [20] (./Lecture notes.aux) ) 
 Here is how much of TeX's memory you used:
- 15421 strings out of 492609
- 280346 string characters out of 6131463
- 346037 words of memory out of 5000000
- 19196 multiletter control sequences out of 15000+600000
- 543478 words of font info for 68 fonts, out of 8000000 for 9000
+ 17964 strings out of 492609
+ 309839 string characters out of 6131463
+ 453777 words of memory out of 5000000
+ 21691 multiletter control sequences out of 15000+600000
+ 544351 words of font info for 73 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 47i,13n,65p,839b,410s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 47i,23n,65p,1410b,919s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/bbold-type1/bbold10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/doublestroke/dsrom10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm7.pfb>
-Output written on "Lecture notes.pdf" (13 pages, 303407 bytes).
+Output written on "Lecture notes.pdf" (20 pages, 435248 bytes).
 PDF statistics:
- 132 PDF objects out of 1000 (max. 8388607)
- 89 compressed objects within 1 object stream
+ 161 PDF objects out of 1000 (max. 8388607)
+ 104 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
- 21 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 41 words of extra memory for PDF output out of 10000 (max. 10000000)
 
