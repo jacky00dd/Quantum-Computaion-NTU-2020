@@ -247,7 +247,7 @@ matrix = transformation = linear operator = map = Quantum gate
 \] 
 \begin{figure}[!hbt]
 	\centering
-	\includegraphics[scale=0.5]{1.png}
+	\includegraphics[scale=0.5]{graph/1.png}
 \end{figure}
 \\
 Quantum wire: The qubit is carried along by this Quantum wire until it reaches the X gate, not necessarily means that it carries qubit through space, may represnt a stationary qubit which is simply sitting there, passing through time until the X gate is applied.
@@ -362,7 +362,7 @@ Global phase doesn't matter, but relative phase does.
 \ \\
 \begin{figure}[!hbt]
 \centering
-\includegraphics[scale=0.1]{2.png}
+\includegraphics[scale=0.1]{graph/2.png}
 \end{figure}
 \begin{equation*}
 \begin{aligned}
@@ -663,7 +663,7 @@ It turns out that Nature experimentally invalidates EPR's points of view, while 
 	\item The thought experiment:
 \begin{figure}[h]
 	\centering
-	\includegraphics[scale = 0.3]{3.png}
+	\includegraphics[scale = 0.3]{graph/3.png}
 \end{figure}
 \begin{enumerate}
 	\item A source  that is capable of repeating the experimental procedure to prepare two particle.
@@ -737,7 +737,7 @@ If we choose $\theta_{ab} = 2\theta, \theta_{ac}=\theta_{cb}= \theta$, then the 
 	\item 1968, \textbf{CHSH(Clauser, Horne, Shimony and Holt) inequality.} (Example of a larger set of Bell's inequalities) \\
 \begin{figure}[h]
 	\centering
-	\includegraphics[scale = 0.3]{4.png}
+	\includegraphics[scale = 0.3]{graph/4.png}
 \end{figure}
 \\
 They do not decide which property she or he will measure. 
@@ -810,7 +810,7 @@ The classical strategy to maximize winning probability simply that Alice and Bob
 If Alice and Bob had pre-shared Bell pair $\frac{\ket{00}+\ket{11}}{\sqrt{2}}=\frac{\ket{++}+\ket{--}}{\sqrt{2}}$, then there is a better strategy
 \begin{figure}[h]
 	\centering
-	\includegraphics[scale=0.5]{5.png}
+	\includegraphics[scale=0.5]{graph/5.png}
 \end{figure}
 \[
 	\ket{\frac{\pi}{8}}=\cos{(\frac{\pi}{8})}\ket{0}+\sin{(\frac{\pi}{8})}\ket{0}
@@ -830,7 +830,7 @@ If y = 0, Bob measure in $\{\ket{\frac{\pi}{8}},\ket{\frac{\pi}{8}+\frac{\pi}{2}
 \item \textbf{Entanglement EPR steering and Bell's nonlocality}
 \begin{figure}[h]
 \centering
-\includegraphics[scale=0.4]{6.png}
+\includegraphics[scale=0.4]{graph/6.png}
 \end{figure}
 \begin{itemize}
 	\item Entanglement: non-seperable to product state
@@ -1044,13 +1044,13 @@ In general, if one of input state is superposed, the output will entangle. It ca
 AND, OR, NAND, XOR, NOT \\
 \begin{figure}[h]
 \centering
-	\includegraphics[scale = 0.5]{10.png}
+	\includegraphics[scale = 0.5]{graph/10.png}
 \end{figure}
 \\
 Universal gate: NAND gate can be used to simulate the AND, OR, XOR and NOT gate, provided wires ancilla bits and Fanout are available.\\
 \begin{figure}[h]
 \centering
-	\includegraphics[scale = 0.5]{11.png}
+	\includegraphics[scale = 0.5]{graph/11.png}
 \end{figure}
 \newpage
 \ \\
@@ -1063,8 +1063,40 @@ Erasing one bit $\Rightarrow$ reducing the number of state by a factor of 2 $\Ri
 \textit{1973, Chales Bennett, main trick to computer using only reversible circuit elements by embedding the gate in a larger reversible gate, possibly making use of some extra ancilla bits.} \\
 \\
 \textit{1982, Ed Fredkin\& Tom Toffoli showed independently the way to bulid reversible computation. By avoiding to erase information, one creates and also must carry along a signigicant amount of redundancy.} \\
+\[
+\Qcircuit @C=1.4em @R=0.7em{
+	& \mbox{\textbf{Toffoli gate}} \\
+	& \ctrl{1} & \qw \\
+	& \ctrl{1} & \qw \\
+	& \targ    & \qw \\
+}
+\] 
 \\
 The information processing by any classical NAND logical gate can be replaced by a Toffoli gate and the ability to prepared and ancilla bit. \textbf{Toffoli gate is universal for classical computation}. \\
+\[
+\Qcircuit @C=1.4em @R=0.7em{
+	& \mbox{Toffoli}\\
+	\\
+	\lstick{a} & \ctrl{1} & \rstick{a} \qw \\
+	\lstick{b} & \ctrl{1} & \rstick{b} \qw \\
+	\lstick{c} & \targ    & \rstick{c\oplus ab} \qw \\
+} \qquad \qquad \qquad 
+\Qcircuit @C=1.4em @R=0.7em{
+	& \mbox{NAND} \\
+	\\
+	\lstick{a} & \ctrl{1} & \rstick{a} \qw & \rstick{\ \ redundancy} \\
+	\lstick{b} & \ctrl{1} & \rstick{b} \qw & \rstick{\ \ (garbage\ bit)} \\
+	\lstick{1} & \targ    & \rstick{1\oplus ab=NAND(a,b)} \qw & \gategroup{3}{3}{4}{4}{.7em}{--} \\
+} \qquad \qquad \qquad  \qquad \qquad  \qquad 
+\Qcircuit @C=1.4em @R=0.7em{
+	& \mbox{Fanout} \\
+	\\
+	\lstick{1} & \ctrl{1} & \rstick{1} \qw \\
+	\lstick{a} & \ctrl{1} & \rstick{a} \qw \\
+	\lstick{0} & \targ    & \rstick{0\oplus a = a} \qw \\
+} 
+\] 
+\\
 \\
 \textbf{Universal quantum gates}
 \begin{enumerate}
@@ -1073,7 +1105,17 @@ The information processing by any classical NAND logical gate can be replaced by
 \end{enumerate}
 Fault-tolerant QC: In principle, an arbitrarily long QC can be performed reliably provided that the average probability of error per gate is less than a certain critical value (the accuracy/error threshold, which depending on the choice of error correction code (ECC)) \\ \\
 \textbf{Two qubit gate decomposition} \\
-where $ABC = I$ and $U=e^{i\delta}AXBXC$. \\
+\[
+\Qcircuit @C=1.4em @R=0.7em{
+	& \ctrl{2} &\qw && &\qw&\ctrl{2}&\qw&\ctrl{2}&\gate{\begin{pmatrix} 1&0\\0&e^{i\delta} \end{pmatrix} } & \qw \\ 
+	& & &=& &&&&& \\ 
+	& \gate{U}   &\qw && &\gate{C} &\targ&\gate{B} &\targ&\gate{A} & \qw \\ 
+}
+\] 
+\\
+\[
+\forall\ \ ABC = I \textit{\ and \ } U=e^{i\delta}AXBXC
+\] 
 For single qubit state
 \[
 	U = e^{i\delta}R_{z}(\alpha)R_{y}(\gamma)R_{z}(\beta)
@@ -1090,7 +1132,14 @@ Thus,
 \[
 	AXBXC = R_{z}(\alpha)R_{y}(\gamma)R_{z}(\beta)
 \] 
-
+The phase operation \\
+\[
+\Qcircuit @C=1.4em @R=0.7em{
+	& \ctrl{2} & \qw && & \qw & \gate{\begin{pmatrix} 1 & 0 \\ 0 & e^{i\delta} \end{pmatrix} }  & \qw \\
+	& &  & = & & &  & \\
+	& \gate{\begin{pmatrix} e^{i\delta} & 0 \\ 0 & e^{i\delta} \end{pmatrix} }  & \qw && & \qw & \qw & \qw \\
+}
+\] 
 \begin{equation*}
 \begin{aligned}
 \ket{00} &\rightarrow \ket{00} \\
@@ -1099,12 +1148,20 @@ Thus,
 \ket{11} &\rightarrow e^{i\delta}\ket{11} \\
 \end{aligned}
 \end{equation*}
+\\
 If control qubit $\ket{0}$ : Nothing happan(LHS), ABC = I (RHS) \\
 If control qubit $\ket{1}$ : U(LHS) , $e^{i\delta}AXBXC$(RHS) \\
 \\
 \textbf{Three qubit gate decomposition} \\
 \[
-U = V^{2}
+\Qcircuit @C=1.4em @R=0.7em{
+	& \ctrl{1} & \qw && &\qw &\qw &\ctrl{1} &\qw &\ctrl{1} &\ctrl{2} &\qw \\
+	& \ctrl{1} & \qw &=& &\qw &\ctrl{1}  &\targ &\ctrl{1}  &\targ &\qw &\qw \\
+	& \gate{U}  & \qw && &\qw &\gate{V}  &\qw &\gate{V^{\dagger}}  &\qw&\gate{V}  &\qw \\
+}
+\] 
+\[
+\forall \ \ \ U = V^{2}
 \] 
 Show
 \begin{equation*}
@@ -1118,18 +1175,43 @@ Show
 RHS
 \begin{equation*}
 \begin{aligned}
-	\ket{00i_{3}} \rightarrow& \ket{00i_{3}}\rightarrow& \ket{00i_{3}}\rightarrow& \ket{00i_{3}}\rightarrow& \ket{00i_{3}}\rightarrow& \ket{00i_{3}} \\
-	\ket{01i_{3}} \rightarrow& \ket{01}V\ket{i_{3}}\rightarrow& \ket{01}V\ket{i_{3}}\rightarrow& \ket{01}V^{\dagger}V\ket{i_{3}}\rightarrow& \ket{01i_{3}}\rightarrow& \ket{01i_{3}} \\
-	\ket{10i_{3}} \rightarrow& \ket{10i_{3}}\rightarrow& \ket{11i_{3}}\rightarrow& \ket{11}V^{\dagger}\rightarrow& \ket{10}V^{\dagger}\ket{i_{3}} \rightarrow& \ket{10}VV^{\dagger}\ket{i_{3}} \\
-	\ket{11i_{3}} \rightarrow& \ket{11}V\ket{i_{3}} \rightarrow&\ket{10}V\ket{i_{3}}\rightarrow& \ket{10}V\ket{i_{3}}\rightarrow&\ket{11}V\ket{i_{3}}\rightarrow&\ket{11}V^{2}\ket{i_{3}} \\
+	&\ket{00i_{3}} \rightarrow& \ket{00i_{3}}\rightarrow& \ket{00i_{3}}\ \ \ \ \ \ \rightarrow& \ket{00i_{3}}\rightarrow& \ket{00i_{3}}\rightarrow& \ket{00i_{3}} \\
+	&\ket{01i_{3}} \rightarrow& \ket{01}V\ket{i_{3}}\rightarrow& \ket{01}V\ket{i_{3}}\rightarrow& \ket{01}V^{\dagger}V\ket{i_{3}}\rightarrow& \ket{01i_{3}}\rightarrow& \ket{01i_{3}} \\
+	&\ket{10i_{3}} \rightarrow& \ket{10i_{3}}\rightarrow& \ket{11i_{3}}\ \ \ \ \ \ \rightarrow& \ket{11}V^{\dagger}\rightarrow& \ket{10}V^{\dagger}\ket{i_{3}} \rightarrow& \ket{10}VV^{\dagger}\ket{i_{3}} \\
+	&\ket{11i_{3}} \rightarrow& \ket{11}V\ket{i_{3}} \rightarrow&\ket{10}V\ket{i_{3}}\rightarrow& \ket{10}V\ket{i_{3}}\rightarrow&\ket{11}V\ket{i_{3}}\rightarrow&\ket{11}V^{2}\ket{i_{3}} \\
 \end{aligned}
 \end{equation*}
+\newpage
+\[
+\Qcircuit @C=1.0em @R=0.7em{
+	& \ctrl{1} & \qw && &\qw &\qw &\ctrl{1} &\qw &\ctrl{1} &\ctrl{2} &\qw & \qw \\
+	& \ctrl{1} & \qw &=& &\qw &\ctrl{1}  &\targ &\ctrl{1}  &\targ &\qw &\qw &\qw \\
+	& \targ  & \qw && &\gate{H}  &\gate{A}  &\qw &\gate{A^{\dagger}}  &\qw&\gate{A}  &\gate{H}&\qw  \\
+}
+\] 
+\\
+\[
+	\forall \ \ \ A = \begin{pmatrix} 1&0\\0&-i \end{pmatrix} \ \ \ V=HAH\ \ \ U = V^{2} = HA^{2}H = HZH = X
+\] 
 \textbf{GHZ(Greenberg, Horne, Zeilinger) state} 
 \[
 	\frac{1}{\sqrt{2}}(\ket{000}+\ket{111})
 \] 
 Transform the computational basis state to the Bell states \\
+\[
+\Qcircuit @C=1.4em @R=1.5em{
+	&\gate{H} & \ctrl{1} &\qw \\
+	&\qw & \targ &\qw \\
+}
+\] 
 Transform the Bell states to the computational basis state
+\[
+\Qcircuit @C=1.4em @R=1.5em{
+	& \ctrl{1} &\gate{H}& \meter\\
+	& \targ &\qw &\meter \\
+}
+\] 
+\\
 \begin{equation*}
 \begin{aligned}
 	\ket{00} &\rightarrow \frac{1}{\sqrt{2}}(\ket{0}+\ket{1})\ket{0} = \frac{1}{\sqrt{2}}(\ket{00}+\ket{10}) &\rightarrow \frac{1}{\sqrt{2}}(\ket{00}+\ket{11}) = \ket{\phi^{+}} \\
@@ -1138,6 +1220,19 @@ Transform the Bell states to the computational basis state
 	\ket{11} &\rightarrow \frac{1}{\sqrt{2}}(\ket{0}-\ket{1})\ket{1} = \frac{1}{\sqrt{2}}(\ket{01}-\ket{11}) &\rightarrow \frac{1}{\sqrt{2}}(\ket{01}-\ket{10}) = \ket{\psi^{-}} \\
 \end{aligned}
 \end{equation*}
+\\
+Transform computational basis state to the  GHZ state \\
+\[
+\Qcircuit @C=1.4em @R=0.7em{
+	\lstick{\ket{0}} & \gate{H} & \ctrl{1} & \ctrl{2} &\qw \\	
+	\lstick{\ket{0}} & \qw & \targ & \qw &\qw \\	
+	\lstick{\ket{0}} & \qw & \qw & \targ &\qw \\	
+}
+\] 
+\[
+	\ket{000} \rightarrow  \frac{1}{\sqrt{2}}(\ket{0}+\ket{1})\ket{00}\rightarrow \frac{1}{\sqrt{2}}(\ket{00}+\ket{11})\ket{0} \rightarrow \frac{1}{\sqrt{2}}(\ket{000}+\ket{111})
+\] 
+\\
 \textbf{Key elements of quantum circuit model}
 \begin{enumerate}
 	\item Classical resources
@@ -1147,7 +1242,6 @@ Transform the Bell states to the computational basis state
 	\item Ability to perform measurements in the computational basis
 \end{enumerate}
 \begin{center}
-\ \\ \\ \\
 \textbf{Application}
 \end{center}
 \textbf{Superdense coding} \\
@@ -1159,9 +1253,23 @@ If the qubit has never been contacted with the rest of the world, i.e. isolated 
 \\
 Case II\\
 Superdense coding protocol enables something similar to be done. (\textbf{Key: quantum entanglement})
+\[
+\Qcircuit @C=1.4em @R=0.7em{
+	\lstick{\ket{0}} & \gate{H} &\ctrl{1} &\gate{X^{i_{2}}}&\gate{Z^{i_{1}}} &\ctrl{1} &\gate{H} &\meter \\ 
+	\lstick{\ket{0}} & \qw &\targ &\qw&\qw&\targ&\qw &\meter \\ 
+}
+\] 
 \begin{itemize}
 	\item A source generate an EPR(Bell) state pair shared by Alice and Bob.
 	\item Alice applies a local operation (determined by the two classical bits of information $i_{1}i_{2}$) to her single qubit which changes the joint state of the pair.
 	\item Alice then sends her qubit o Bob, who is now able to perform a measurement on the pair, which reveals the values of $i_{1}i_{2}$
 \end{itemize}
+\begin{equation*}
+\begin{aligned}
+	i_{1}i_{2} = 00\ \ \ \  & \ket{\phi^{+}} \rightarrow \ket{\phi^{+}} \rightarrow  00 \\
+	i_{1}i_{2} = 01\ \ \ \  & \ket{\phi^{+}} \rightarrow \ket{\psi^{+}} \rightarrow  01 \\
+	i_{1}i_{2} = 10\ \ \ \  & \ket{\phi^{+}} \rightarrow \ket{\phi^{-}} \rightarrow  01 \\
+	i_{1}i_{2} = 00\ \ \ \  & \ket{\phi^{+}} \rightarrow \ket{\psi^{-}} \rightarrow  11 \\
+\end{aligned}
+\end{equation*}
 \end{document}

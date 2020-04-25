@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2020.2.3)  24 APR 2020 23:41
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2020.2.3)  25 APR 2020 16:37
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -735,16 +735,16 @@ LaTeX Font Info:    Try loading font information for U+dsrom on input line 242.
 (/usr/share/texlive/texmf-dist/tex/latex/doublestroke/Udsrom.fd
 File: Udsrom.fd 1995/08/01 v0.1 Double stroke roman font definitions
 )
-<1.png, id=22, 382.42876pt x 144.54pt>
-File: 1.png Graphic file (type png)
-<use 1.png>
-Package pdftex.def Info: 1.png  used on input line 250.
+<graph/1.png, id=22, 382.42876pt x 144.54pt>
+File: graph/1.png Graphic file (type png)
+<use graph/1.png>
+Package pdftex.def Info: graph/1.png  used on input line 250.
 (pdftex.def)             Requested size: 191.2139pt x 72.2698pt.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 293.
 Package mdframed Info: Not enough space on this page on input line 303.
- [4 <./1.png>]
+ [4 <./graph/1.png>]
 Package mdframed Info: Not enough space on this page on input line 303.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
@@ -752,10 +752,10 @@ Package mdframed Info: mdframed detected package amsthm
 LaTeX Font Info:    Font shape `OMS/cmr/m/it' in size <10> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 333.
  [5]
-<2.png, id=38, 803.0pt x 854.19125pt>
-File: 2.png Graphic file (type png)
-<use 2.png>
-Package pdftex.def Info: 2.png  used on input line 365.
+<graph/2.png, id=38, 803.0pt x 854.19125pt>
+File: graph/2.png Graphic file (type png)
+<use graph/2.png>
+Package pdftex.def Info: graph/2.png  used on input line 365.
 (pdftex.def)             Requested size: 80.3047pt x 85.42412pt.
 
 
@@ -784,7 +784,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 401--404
 
  []
 
-[6 <./2.png>]
+[6 <./graph/2.png>]
 Overfull \hbox (32.07721pt too wide) in paragraph at lines 422--424
 \OT1/cmr/m/it/10 From pos-tu-late of pro-jec-tive mea-sure-ment, $\OML/cmm/m/it/10 M[] \OT1/cmr/m/n/10 = \OML/cmm/m/it/10 M[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 Hermition\OT1/cmr/m/n/10 )$ \OT1/cmr/m/it/10 and $\OML/cmm/m/it/10 M[]M[] \OT1/cmr/m/n/10 = \OML/cmm/m/it/10 M[]^^N[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 OrthogonalProjector\OT1/cmr/m/n/10 )$
  []
@@ -853,10 +853,10 @@ Underfull \hbox (badness 10000) in paragraph at lines 655--659
  []
 
 [10]
-<3.png, id=58, 398.23781pt x 225.09094pt>
-File: 3.png Graphic file (type png)
-<use 3.png>
-Package pdftex.def Info: 3.png  used on input line 666.
+<graph/3.png, id=58, 398.23781pt x 225.09094pt>
+File: graph/3.png Graphic file (type png)
+<use graph/3.png>
+Package pdftex.def Info: graph/3.png  used on input line 666.
 (pdftex.def)             Requested size: 119.47226pt x 67.52779pt.
 
 Underfull \hbox (badness 10000) in paragraph at lines 674--677
@@ -873,7 +873,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 721--725
 
  []
 
-[11 <./3.png>]
+[11 <./graph/3.png>]
 ./Lecture notes.tex:732: Double subscript.
 l.732 ...\psi|P_{m}|\psi} = _{a}\braket{-|+}_{b} _
                                                   {b}\braket{+|-}_{a}=\sin^{...
@@ -884,10 +884,10 @@ Underfull \hbox (badness 10000) in paragraph at lines 735--737
 
  []
 
-<4.png, id=63, 520.94624pt x 179.16937pt>
-File: 4.png Graphic file (type png)
-<use 4.png>
-Package pdftex.def Info: 4.png  used on input line 740.
+<graph/4.png, id=63, 520.94624pt x 179.16937pt>
+File: graph/4.png Graphic file (type png)
+<use graph/4.png>
+Package pdftex.def Info: graph/4.png  used on input line 740.
 (pdftex.def)             Requested size: 156.28508pt x 53.75122pt.
 
 Underfull \hbox (badness 10000) in paragraph at lines 747--751
@@ -904,7 +904,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 747--751
 
  []
 
-[12 <./4.png>]
+[12 <./graph/4.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 794--797
 
  []
@@ -914,10 +914,10 @@ Underfull \hbox (badness 10000) in paragraph at lines 799--803
 
  []
 
-<5.png, id=68, 190.46156pt x 190.46156pt>
-File: 5.png Graphic file (type png)
-<use 5.png>
-Package pdftex.def Info: 5.png  used on input line 813.
+<graph/5.png, id=68, 190.46156pt x 190.46156pt>
+File: graph/5.png Graphic file (type png)
+<use graph/5.png>
+Package pdftex.def Info: graph/5.png  used on input line 813.
 (pdftex.def)             Requested size: 95.23053pt x 95.23053pt.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
@@ -953,17 +953,17 @@ Underfull \hbox (badness 10000) in paragraph at lines 823--830
  []
 
 [13]
-<6.png, id=73, 424.58624pt x 312.41719pt>
-File: 6.png Graphic file (type png)
-<use 6.png>
-Package pdftex.def Info: 6.png  used on input line 833.
+<graph/6.png, id=73, 424.58624pt x 312.41719pt>
+File: graph/6.png Graphic file (type png)
+<use graph/6.png>
+Package pdftex.def Info: graph/6.png  used on input line 833.
 (pdftex.def)             Requested size: 169.83148pt x 124.96465pt.
 
 Underfull \hbox (badness 10000) in paragraph at lines 842--843
 
  []
 
-[14 <./5.png> <./6.png>]
+[14 <./graph/5.png> <./graph/6.png>]
 ./Lecture notes.tex:876: Missing { inserted.
 <to be read again> 
                    }
@@ -1021,116 +1021,148 @@ Underfull \hbox (badness 10000) in paragraph at lines 1023--1027
  []
 
 <xymatrix 9x3 765> <xymatrix 9x3 765> [16]
-<10.png, id=85, 369.54556pt x 239.9066pt>
-File: 10.png Graphic file (type png)
-<use 10.png>
-Package pdftex.def Info: 10.png  used on input line 1047.
+<graph/10.png, id=85, 369.54556pt x 239.9066pt>
+File: graph/10.png Graphic file (type png)
+<use graph/10.png>
+Package pdftex.def Info: graph/10.png  used on input line 1047.
 (pdftex.def)             Requested size: 184.77232pt x 119.953pt.
-<11.png, id=86, 408.52625pt x 510.90875pt>
-File: 11.png Graphic file (type png)
-<use 11.png>
-Package pdftex.def Info: 11.png  used on input line 1053.
+<graph/11.png, id=86, 408.52625pt x 510.90875pt>
+File: graph/11.png Graphic file (type png)
+<use graph/11.png>
+Package pdftex.def Info: graph/11.png  used on input line 1053.
 (pdftex.def)             Requested size: 204.26262pt x 255.45375pt.
 
 Underfull \hbox (badness 10000) in paragraph at lines 1040--1055
 
  []
 
-[17 <./10.png (PNG copy)> <./11.png>]
+[17 <./graph/10.png (PNG copy)> <./graph/11.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 1056--1060
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1062--1071
+Underfull \hbox (badness 10000) in paragraph at lines 1062--1066
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1062--1071
+Underfull \hbox (badness 10000) in paragraph at lines 1062--1066
+
+ []
+
+<xymatrix 3x4 318>
+Underfull \hbox (badness 10000) in paragraph at lines 1073--1076
+
+ []
+
+<xymatrix 3x5 322> <xymatrix
+./Lecture notes.tex:1090: Illegal parameter number in definition of \lastprentry@@.
+<to be read again> 
+                   1
+l.1090 }
+         \qquad \qquad \qquad  \qquad \qquad  \qquad
+You meant to type ## instead of #, right?
+Or maybe a } was forgotten somewhere earlier, and things
+are all screwed up? I'm going to assume that you meant ##.
+
+./Lecture notes.tex:1090: Illegal parameter number in definition of \lastprentry@@.
+<to be read again> 
+                   1
+l.1090 }
+         \qquad \qquad \qquad  \qquad \qquad  \qquad
+You meant to type ## instead of #, right?
+Or maybe a } was forgotten somewhere earlier, and things
+are all screwed up? I'm going to assume that you meant ##.
+
+4x5 352> <xymatrix 3x5 322>
+Underfull \hbox (badness 10000) in paragraph at lines 1098--1103
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1062--1071
+Underfull \hbox (badness 10000) in paragraph at lines 1106--1108
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1074--1078
+Underfull \hbox (badness 10000) in paragraph at lines 1106--1108
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 1101--1106
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1101--1106
+<xymatrix 11x3 1081>
+Underfull \hbox (badness 10000) in paragraph at lines 1114--1116
 
  []
 
 [18]
+Underfull \hbox (badness 10000) in paragraph at lines 1134--1136
 
-./Lecture notes.tex:1150: LaTeX Error: There's no line here to end.
+ []
 
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.1150 \ \\ \\
-               \\
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-./Lecture notes.tex:1150: LaTeX Error: There's no line here to end.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.1150 \ \\ \\ \\
-                 
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1153--1163
+<xymatrix 8x3 594>
+Underfull \hbox (badness 10000) in paragraph at lines 1150--1156
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1153--1163
+Underfull \hbox (badness 10000) in paragraph at lines 1150--1156
+
+ []
+
+<xymatrix 12x3 1546> [19] <xymatrix 13x3 1721>
+Underfull \hbox (badness 10000) in paragraph at lines 1191--1193
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1153--1163
+Underfull \hbox (badness 10000) in paragraph at lines 1199--1201
 
  []
 
-[19]
+<xymatrix 4x2 333> <xymatrix 4x2 455>
+Underfull \hbox (badness 10000) in paragraph at lines 1213--1215
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1222--1225
+
+ []
+
+<xymatrix 5x3 599>
+Underfull \hbox (badness 10000) in paragraph at lines 1247--1256
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1247--1256
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1247--1256
+
+ []
+
+[20] <xymatrix 8x2 976>
 \tf@thm=\write4
 \openout4 = `"Lecture notes.thm"'.
 
- [20] (./Lecture notes.aux) ) 
+ [21] (./Lecture notes.aux) ) 
 Here is how much of TeX's memory you used:
- 17964 strings out of 492609
- 309839 string characters out of 6131463
- 453777 words of memory out of 5000000
- 21691 multiletter control sequences out of 15000+600000
+ 18002 strings out of 492609
+ 310246 string characters out of 6131463
+ 466198 words of memory out of 5000000
+ 21728 multiletter control sequences out of 15000+600000
  544351 words of font info for 73 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 47i,23n,65p,1410b,919s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 47i,23n,65p,1410b,1034s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/bbold-type1/bbold10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/doublestroke/dsrom10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm7.pfb>
-Output written on "Lecture notes.pdf" (20 pages, 435248 bytes).
+Output written on "Lecture notes.pdf" (21 pages, 441519 bytes).
 PDF statistics:
- 161 PDF objects out of 1000 (max. 8388607)
- 104 compressed objects within 2 object streams
+ 164 PDF objects out of 1000 (max. 8388607)
+ 106 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
  41 words of extra memory for PDF output out of 10000 (max. 10000000)
 
