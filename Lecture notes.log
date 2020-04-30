@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2020.2.3)  25 APR 2020 16:37
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2020.2.3)  30 APR 2020 18:12
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1146,23 +1146,87 @@ Underfull \hbox (badness 10000) in paragraph at lines 1247--1256
  []
 
 [20] <xymatrix 8x2 976>
+Underfull \hbox (badness 10000) in paragraph at lines 1288--1295
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1288--1295
+
+ []
+
+<xymatrix 9x6 1402> [21] [22]
+Underfull \hbox (badness 10000) in paragraph at lines 1343--1347
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1348--1352
+
+ []
+
+<xymatrix 8x3 738> <xymatrix 9x6 1402>
+Underfull \hbox (badness 10000) in paragraph at lines 1371--1373
+
+ []
+
+<xymatrix 8x5 1370>
+Underfull \hbox (badness 10000) in paragraph at lines 1385--1389
+
+ []
+
+<xymatrix 3x5 346> <xymatrix 3x5 482> [23]
+./Lecture notes.tex:1409: Undefined control sequence.
+<argument> x_{1},x_{2}\cdotsx 
+                              _{n}
+l.1409 ...}}\ket{y} = \ket{x_{1},x_{2}\cdotsx_{n}}
+                                                  \ket{y\oplus f(x_{1},x_{2}...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./Lecture notes.tex:1409: Double subscript.
+<argument> x_{1},x_{2}\cdotsx _
+                               {n}
+l.1409 ...}}\ket{y} = \ket{x_{1},x_{2}\cdotsx_{n}}
+                                                  \ket{y\oplus f(x_{1},x_{2}...
+I treat `x_1_2' essentially like `x_1{}_2'.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1421--1427
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1421--1427
+
+ []
+
+<xymatrix 3x2 242>
+Underfull \hbox (badness 10000) in paragraph at lines 1439--1443
+
+ []
+
+<xymatrix 3x3 322> <xymatrix 4x3 558> <xymatrix 4x4 737> [24]
 \tf@thm=\write4
 \openout4 = `"Lecture notes.thm"'.
 
- [21] (./Lecture notes.aux) ) 
+ [25] (./Lecture notes.aux) ) 
 Here is how much of TeX's memory you used:
- 18002 strings out of 492609
- 310246 string characters out of 6131463
- 466198 words of memory out of 5000000
- 21728 multiletter control sequences out of 15000+600000
+ 18022 strings out of 492609
+ 310351 string characters out of 6131463
+ 467363 words of memory out of 5000000
+ 21748 multiletter control sequences out of 15000+600000
  544351 words of font info for 73 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 47i,23n,65p,1410b,1034s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 47i,23n,65p,1410b,1068s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/bbold-type1/bbold10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/doublestroke/dsrom10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm7.pfb>
-Output written on "Lecture notes.pdf" (21 pages, 441519 bytes).
+Output written on "Lecture notes.pdf" (25 pages, 458281 bytes).
 PDF statistics:
- 164 PDF objects out of 1000 (max. 8388607)
- 106 compressed objects within 2 object streams
+ 177 PDF objects out of 1000 (max. 8388607)
+ 115 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
  41 words of extra memory for PDF output out of 10000 (max. 10000000)
 

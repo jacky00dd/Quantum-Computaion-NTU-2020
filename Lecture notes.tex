@@ -1272,4 +1272,205 @@ Superdense coding protocol enables something similar to be done. (\textbf{Key: q
 	i_{1}i_{2} = 00\ \ \ \  & \ket{\phi^{+}} \rightarrow \ket{\psi^{-}} \rightarrow  11 \\
 \end{aligned}
 \end{equation*}
+Summary \\
+Superdense coding is a remarkable procedure because Alice only even comes in contact with one qubit, yet still manage to convey two bits of classical infotmation. 
+\begin{remark}
+	It is very good example of qunatum information process in action (entanglement as a resource)
+\end{remark}
+\begin{remark}
+Superdense coding can be viewed as a statement about the interchangibility of physical resources.
+\[
+	\textit{1 entangle bit + 1 qubit of communication} \geq \textit{2 bits of classical information}
+\] 
+\textit{B P William et al, Phys po Lett 118,050501 (2017)}
+"Superdence coding overs optical fibers line with complete Bell-State measurement" $\approx$ 1.665 classical bits
+\end{remark}
+\ \\
+\textbf{Quantum Teleportation}\\
+\\
+\textit{Q: Can Alice transmit any arbitrary qubit quantum state to Bob using only 2 classical bits of infomation?} \\
+\\
+Why doesn't Alice just tell Bob?
+\begin{enumerate}
+	\item To specify two complete numbers of a qubit state to arbitrary precisions requires infinte amount of information
+	\item Alice may not know what herqubit state is
+\end{enumerate}
+By using quantum entanglement, it becomes possible!
+\[
+\Qcircuit @C=1.4em @R=0.7em{
+	&&\ket{\psi}&&&Bell\ state\ measuremnet & \\
+	\lstick{\ket{\psi}} & \qw & \qw & \ctrl{2}  & \gate{H} &\meter & \cw & \control \cw  \\
+							  &&\ket{\psi^{+}}&&&m_{1}&Classical\ bit\\
+	\lstick{\ket{0}} & \gate{H} & \ctrl{2} & \targ & \qw & \meter  & \control \cw\\ 
+							  &&&&&m_{2}&&\\
+	\lstick{\ket{1}} & \qw & \targ &\qw &\qw & \qw  &\gate{X^{m_{2}+1}}\cwx[-2] & \gate{Z^{m_{1}}} \cwx[-4]& \rstick{\ket{\psi}} \qw  \\
+}
+\] 
+\begin{equation*}
+\begin{aligned}
+	\ket{\psi}\otimes \ket{\psi^{+}} &= (\alpha \ket{0}+\beta\ket{1})\otimes \frac{1}{\sqrt{2}}(\ket{01}+\ket{10}) \\
+												&= \frac{\alpha}{\sqrt{2}}(\ket{001}+\ket{010}) + \frac{\beta}{\sqrt{2}}(\ket{101}+\ket{110}) \\
+												&= \frac{\alpha}{\sqrt{2}}(\frac{\ket{\phi^{+}}+\ket{\phi^{-}}}{\sqrt{2}})\ket{1} + \frac{\alpha}{\sqrt{2}}(\frac{\ket{\psi^{+}}+\ket{\psi^{-}}}{\sqrt{2}})\ket{0} + \frac{\beta}{\sqrt{2}}(\frac{\ket{\psi^{+}}-\ket{\psi^{-}}}{\sqrt{2}})\ket{1} + \frac{\beta}{\sqrt{2}}(\frac{\ket{\phi^{+}}-\ket{\phi^{-}}}{\sqrt{2}})\ket{0} \\
+												&= \frac{1}{2}\ket{\psi^{+}} (\alpha\ket{0}+\beta\ket{1}) + \frac{1}{2}\ket{\psi^{-}} (\alpha\ket{0}-\beta\ket{1}) + \frac{1}{2}\ket{\phi^{+}} (\alpha\ket{1}+\beta\ket{0}) + \frac{1}{2}\ket{\phi^{-}} (\alpha\ket{1}-\beta\ket{0})
+\end{aligned}
+\end{equation*}
+Alice perform a Bell basis measurement with equal probability $p=\frac{1}{4}$
+\begin{equation*}
+\begin{aligned}
+	\ket{\psi^{+}} &\rightarrow \ket{01}\ \  Bob\ I \\ 
+	\ket{\psi^{-}} &\rightarrow \ket{11} \ \  Bob\ Z \\
+	\ket{\phi^{+}} &\rightarrow \ket{00} \ \  Bob\ X \\
+	\ket{\phi^{-}} &\rightarrow \ket{10}  \ \  Bob\ ZX\\
+\end{aligned}
+\end{equation*}
+\begin{enumerate}
+	\item \textbf{"Infinite information" with only two classical bits \\}
+			It onlu involves two bits of classical communication. This is rather remarkable when you consider that giving a classical description of Alice's quantum state would require infinite amount of classical information.
+		\item \textbf{Blind nature of the protocol} \\
+			Even more remarkable when you consider that Alice did not even need to know what her quantum state was to perform that protocol. The rules of quatnum mechanics prevent her from even determining the state of her system. Yet she and Bob still sucessed in reansmitting thate state using just two bits of classical information and a pre-shared Bell state.
+		\item \textbf{Vilation of light-speed limit} \\
+			Does quantum teleportation violate the rule saying that information acnnot be reansmitted faster than light? After all, doesn't Alice measurement cause Bob to obtain Alice's state $\ket{\psi}$ or at least something related to it? It turns out that in fact it is not possible for Alice and Bobto use this effect to communicate fastenr than light. Indeed, Alice must send two bits of classical information to allow Bob to reconstruct the state $\ket{\psi}$. This information is transmitted by classical means at a speed not greater than that of light.
+		\item \textbf{Transmission of information not physical system itself} \\
+			It is the information about the quantum state of the qubit that passed from A to B and not the physical system itself. The physical systems implementing the qubit can be very different in Alice and Bob's location.
+		\item \textbf{No information about the state is carried by the two classical bits} \\
+			The probabilities of the measurement outcomes do not deepend on the state being teleported. The classical message from Alice to Bob contains in some sense, no information about the identity of the state being teleported.
+		\item \textbf{Consistent with no-cloning theorey (No arbitray copying)}
+\[
+	Alice: \ket{\psi} \rightarrow \ket{0} or \ket{1} \ \ \ \ \ Bob:Bell's\ state \rightarrow \ket{\psi}			
+\] 
+So the unknown quantum state $\ket{\psi}$ vanishes in one place and reappears in another.
+		\item  \textbf{Close connnection between SC and QT}
+		\item \textbf{QT and SC can be viewed as a statement about interchangibility of physical resources} \\ \\
+\textit{QT: 1 entangle bit + 2 classical bits of communication} $\geq$ \textit{1 qubit of communication} \\ 
+\textit{SC: 1 entangle bit + 2 qubit of communication} $\geq$ \textit{2 bits of classical communication} \\ 
+\textit{1 qubit communication  = 2 classical bits of communication}
+\end{enumerate}
+\ \\
+\textbf{\textit{Principle of defferd measurement}} \\ 
+\\
+Measurements can be moved from an intermediate state of a quantum circuit to the end of the circuit. If the measurement results are used at any state of circuit to conditionally control subsequent quantum gate , then the classically  controlled operation can be replaced by conditional quantum operation.
+\[
+\Qcircuit @C=1.4em @R=0.7em{
+	& \meter & \control \cw &&& \qw &\ctrl{2} & \meter  \\
+	&&&=& \\
+	& \qw    & \gate{U} \cwx[-2] &&& \qw & \gate{U}  & \qw
+}
+\] 
+\begin{remark}
+Measurement commutes with quantum gates when the qubit being measured is a control qubit.
+\end{remark}
+\[
+\Qcircuit @C=1.4em @R=0.7em{
+	&&\ket{\psi}&&&Bell\ state\ measuremnet & \\
+	\lstick{\ket{\psi}} & \qw & \qw & \ctrl{2}  & \gate{H} &\meter & \cw & \control \cw  \\
+							  &&\ket{\psi^{+}}&&&m_{1}&Classical\ bit\\
+	\lstick{\ket{0}} & \gate{H} & \ctrl{2} & \targ & \qw & \meter  & \control \cw\\ 
+							  &&&&&m_{2}&&\\
+	\lstick{\ket{1}} & \qw & \targ &\qw &\qw & \qw  &\gate{X^{m_{2}+1}}\cwx[-2] & \gate{Z^{m_{1}}} \cwx[-4]& \rstick{\ket{\psi}} \qw  \\
+}
+\] 
+\\
+\[
+\Qcircuit @C=1.4em @R=0.7em{
+	&&\ket{\psi}&&&& \\
+	\lstick{\ket{\psi}} & \qw & \qw & \ctrl{2}  & \gate{H} & \qw &\ctrl{3} & \meter   \\
+							  &&\ket{\psi^{+}}&&&&\\
+	\lstick{\ket{0}} & \gate{H} & \ctrl{1} & \targ & \qw & \ctrlo{1} & \qw & \meter  \\ 
+	\lstick{\ket{1}} & \qw & \targ &\qw  & \qw  &\gate{X} & \gate{Z}&  \rstick{\ket{\psi}} \qw  \\
+}
+\] 
+\begin{remark}
+No communication but only teleportation 
+\end{remark}
+\ \\
+\textbf{Function evalution} \\
+\\
+Classical computer $f:\{0,1\}^{n}\rightarrow \{0,1\}$\ \ n-inputs to 1-output\ \ e.g. NAND 
+\[
+\Qcircuit @C=1.4em @R=0.7em{
+	\lstick{x_{1}} & \multigate{4}{f} & \\
+	\lstick{x_{2}} & \ghost{f} & \\
+	\lstick{\vdots} & \ghost{f} & \rstick{f(x)} \qw  \\
+	\lstick{x_{n-1}} & \ghost{f} &  \\
+	\lstick{x_{n}} & \ghost{f} &  \\
+}
+\] 
+In general, can make it reversible if we add own ancillary and quantum mechanically
+\[
+\Qcircuit @C=1.4em @R=0.7em{
+	\lstick{\ket{x_{1}}} & \multigate{4}{U_{f}} & \rstick{\ket{x_{1}}} \qw \\
+\lstick{\ket{x_{2}}} & \ghost{U_{f}} & \rstick{\ket{x_{2}}} \qw \\
+\lstick{\vdots} & \ghost{U_{f}} & \rstick{\vdots} \qw \\
+\lstick{\ket{x_{n}}} & \ghost{U_{f}} & \rstick{\ket{x_{n}}} \qw \\
+\lstick{\ket{y}} & \ghost{U_{f}} & \rstick{\ket{y \oplus f(x)}} \qw \\
+}
+\] 
+\[
+	U_{f} \ket{x_{1},x_{2}\cdots x_{n}}\ket{y} = \ket{x_{1},x_{2}\cdotsx_{n}}\ket{y\oplus f(x_{1},x_{2}\cdots x_{n})}
+\] 
+One can show thate $U_{f}$ is also unitary
+\[
+	U_{f}^{2}\ket{x}\ket{y} = U_f\ket{x}\ket{y\oplus f(x)} = \ket{x}\ket{(y\oplus f(x))\oplus f(x)} = \ket{x}\ket{y}
+\] 
+Thus, $U_{f}^{2} = I \Rightarrow U_{f}^{-1}=U_{f}$. Let's show $U_{f}$ is Hamiltonian matrix element in computational basis 
+\[
+	U(x,y;x',y') = \bra{x}\bra{y}U_{f}\ket{x'}\ket{y'} = \braket{x|x'}\braket{y|y'\oplus f(x)} = \delta_{xx'}\delta_{y,y'\oplus f(x)}
+\] 
+\[
+	U^{\dagger}(x,y;x',y') = U_{f}(x',y';x,y) = \delta_{x'x}\delta_{y',y\oplus f(x')}
+\] 
+They yield the same result. Thus $U^{\dagger}_{f}=U_{f}=U^{-1}_{f}$ is unitary. \\
+\\
+\textbf{Quantum parallelism} \\
+\\
+n = 1
+\[
+\Qcircuit @C=1.4em @R=0.7em{
+	\lstick{\frac{\ket{0}+\ket{1}}{\sqrt{2}}} & \multigate{1}{U_{f}} & \qw\\
+	\lstick{\ket{0}} & \ghost{U_{f}} & \qw
+}
+\] 
+\begin{equation*}
+\begin{aligned}
+	U_{f}(\frac{\ket{0}+\ket{1}}{\sqrt{2}}\otimes \ket{0}) &= \frac{1}{\sqrt{2}} (U_{f}\ket{0}\ket{0}+U_{f}\ket{1}\ket{0}) \\
+																			 &= \frac{1}{\sqrt{2}}(\ket{0}\ket{0\oplus f(0)}+\ket{1}\ket{0\oplus f(1)}) \\
+																			 &= \frac{1}{\sqrt{2}}(\ket{0}\ket{f(0)}+\ket{1}\ket{f(1)})
+\end{aligned}
+\end{equation*}
+Although $U_{f}$ is applied once, the output state contains informations about both f(0) and f(1); it is almost as if we have evaluated f(x) for the two values of x simultaneously, a feature known as quantum parallelism\\
+\\
+n = 2
+\[
+\Qcircuit @C=1.4em @R=0.7em{
+	\lstick{\frac{\ket{0}+\ket{1}}{\sqrt{2}}} & \multigate{2}{U_{f}} & \qw\\
+	\lstick{\frac{\ket{0}+\ket{1}}{\sqrt{2}}} & \ghost{U_{f}}& \qw\\
+	\lstick{\ket{0}} & \ghost{U_{f}} & \qw
+}
+\] 
+\[
+	U_{f}(\frac{1}{\sqrt{2^{2}}}(\ket{00}+\ket{01}+\ket{10}+\ket{11})\ket{0}) = \frac{1}{\sqrt{2^{2}}} (\ket{00}\ket{f(00)}+\ket{01}\ket{f(01)}+\ket{10}\ket{f(10)}+\ket{11}\ket{f(11)})
+\] 
+\begin{remark}
+We can do the $2^{2}$ calculation simultaneously!!!
+\end{remark}
+The Hardmard gate is useful to generate superposition gate
+\[
+\Qcircuit @C=1.4em @R=0.7em{
+	\lstick{\ket{0}} &\gate{H}  &\multigate{2}{U_{f}} & \qw\\
+	\lstick{\ket{0}} & \gate{H} &\ghost{U_{f}}& \qw\\
+	\lstick{\ket{0}} & \qw & \ghost{U_{f}} & \qw
+}
+\] 
+Thus, for n-qubit
+\[
+H^{\otimes n}\ket{0} = \frac{1}{\sqrt{2^{n}}} \sum^{}_{x} \ket{x} \ \  \forall \textit{x is all possible value}
+\] 
+\[
+\Qcircuit @C=1.4em @R=0.7em{
+	\lstick{\ket{0}} &\gate{H}  &\multigate{3}{U_{f}} & \qw\\
+	\lstick{\ket{0}} & \gate{H} &\ghost{U_{f}}& \qw\\
+	\lstick{\vdots} & \gate{H} &\ghost{U_{f}}& \rstick{\vdots\ \ \ \frac{1}{\sqrt{2^{n}}} \sum^{2^{n-1}}_{x=0} \ket{x}\ket{f(x)}} \qw\\
+	\lstick{\ket{0}} & \qw & \ghost{U_{f}} & \qw
+} 
+\] 
 \end{document}
