@@ -1,6 +1,6 @@
 # Fdb version 3
-["pdflatex"] 1588241556 "Lecture notes.tex" "Lecture notes.pdf" "Lecture notes" 1588241556
-  "/dev/null" 1588227438 0 d41d8cd98f00b204e9800998ecf8427e ""
+["pdflatex"] 1588844696 "Lecture notes.tex" "Lecture notes.pdf" "Lecture notes" 1588844696
+  "/dev/null" 1588830828 0 d41d8cd98f00b204e9800998ecf8427e ""
   "/etc/texmf/web2c/texmf.cnf" 1572194759 475 c0e671620eb5563b2130f56340a5fde8 ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1511824771 3332 103109f5612ad95229751940c61aada0 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1246382020 1004 54797486969f23fa377b128694d548df ""
@@ -53,6 +53,8 @@
   "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb" 1248133631 32915 7bf7720c61a5b3a7ff25b0964421c9b6 ""
   "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb" 1248133631 32716 08e384dc442464e7285e891af9f45947 ""
   "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb" 1248133631 37944 359e864bd06cde3b1cf57bb20757fb06 ""
+  "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex7.pfb" 1248133631 30457 bc0868ebece724ed7c3d37e3d9bff7bd ""
+  "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb" 1248133631 31764 459c573c03a4949a528c2cc7f557e217 ""
   "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb" 1248133631 34694 ad62b13721ee8eda1dcc8993c8bd7041 ""
   "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm7.pfb" 1248133631 35309 940e81a5b9e04201a07e8b33a3ae6e64 ""
   "/usr/share/texlive/texmf-dist/fonts/type1/public/bbold-type1/bbold10.pfb" 1290383964 25452 d4e98a3bf6b13d4b7dcffd6302990a65 ""
@@ -133,8 +135,8 @@
   "/usr/share/texmf/web2c/texmf.cnf" 1562720991 35073 2a40cfca74fcd5e2568b569ccaadf3f1 ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1580723224 4549418 4593509275c90822931a1b14bc17851e ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1580723268 4263355 6f2c95936d31950d1e7646cbf386c4e0 ""
-  "Lecture notes.aux" 1588241469 6842 40b9275773d353912e3560369bbfd295 "pdflatex"
-  "Lecture notes.tex" 1588241555 66574 c461a7cb455262af9fd67d76c2436a66 ""
+  "Lecture notes.aux" 1588844640 7099 2b668a3d47317dbadceeaab3dd5de823 "pdflatex"
+  "Lecture notes.tex" 1588844694 76473 d0d3fe878a16f8091825158ccb3d9c6c ""
   "graph/1.png" 1583998961 8949 17e4d7a69e28b9fa587ffcf889c82213 ""
   "graph/10.png" 1587742689 24863 2d797a872d8e504175e126585003309b ""
   "graph/11.png" 1587742625 54914 a9566a43539c0dd333dba7712b5041c9 ""
@@ -144,7 +146,7 @@
   "graph/5.png" 1587020699 9883 e6c4adda3c3289084f01060abd8c3c3e ""
   "graph/6.png" 1587023886 35874 d09634ed8a0edef0fa2949b803c3016f ""
   (generated)
-  "Lecture notes.aux"
   "Lecture notes.thm"
+  "Lecture notes.aux"
   "Lecture notes.log"
   "Lecture notes.pdf"

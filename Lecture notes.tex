@@ -1473,4 +1473,176 @@ H^{\otimes n}\ket{0} = \frac{1}{\sqrt{2^{n}}} \sum^{}_{x} \ket{x} \ \  \forall \
 	\lstick{\ket{0}} & \qw & \ghost{U_{f}} & \qw
 } 
 \] 
+\[
+	U_{f}(H^{\otimes n}\ket{0}\otimes\ket{0}) = \frac{1}{\sqrt{2^{n}}} \sum^{}_{x} \ket{x}\ket{f(x)}
+\] 
+In some sense, this massive quantum parallelism enables all possible values of the function f to be evaluated simultaneously, even though we apparently only evalute $U_{f}$ once. However, this quantum parallelism is not immediately useful! ($\because$ Measurement of the state $ \sum^{}_{x} \ket{x,f(x)}$ would give only $f(x)$ for a single value of $x=x^{(i)}$. Of course, a classical computer can do this easily!) Quantum computer requires something more than just quantum parallelism to be useful; It requires the ability to extract useful information efficiently, e.g. extract information about more than one value of $f(x)$ from superposition state like $ \sum^{}_{x} \ket{x,f(x)}$ 
+\begin{center}
+\textbf{Quantum algorithm}
+\end{center}
+\textbf{Deutsch's algorithm}\\
+\\
+\textit{Deutsch's problem: Given a "black box" computing a function $f:\{0,1\}\to \{0,1\}$. Our task is to determine whether  $f$ is a constant or balanced.}\\
+\\
+Classically: we need to evaluate both $f(0)$ and $f(1)$ \\
+Quantumly: we need only to use the black box for $f(x)$ once!\\
+\\
+\textbf{Deutsch's algorithm:} Combine quantum parallelism with quantum interference to solve the problem by using the black box function $f$ only once. \\
+\textbf{Idea: }To put information about the function $f$ in the phase of the quantum state.
+\[
+\Qcircuit @C=1.4em @R=0.7em{
+	&\frac{1}{\sqrt{2}}(\ket{0}+\ket{1})&& \\
+	\lstick{\ket{0}} & \gate{H} & \multigate{1}{U_{f}} & \qw \\ 
+	\lstick{\ket{1}} & \gate{H} & \ghost{U_{f}} & \qw \\ 
+	&\frac{1}{\sqrt{2}}(\ket{0}-\ket{1})&& \\
+}
+\] 
+\\
+\[
+\Qcircuit @C=1.4em @R=0.7em{
+	\lstick{\ket{x}} & \multigate{1}{U_{f}} & \rstick{\ket{x}} \qw \\
+	\lstick{\frac{\ket{0}-\ket{1}}{\sqrt{2}}} & \ghost{U_{f}} & \rstick{\frac{\ket{f(x)}-\ket{1\oplus f(x)}}{\sqrt{2}}} \qw \\ 
+}
+\] 
+\\
+\begin{equation*}
+\begin{aligned}
+	If\ f(x)=0\Rightarrow \ket{x}\left(\frac{\ket{0}-\ket{1}}{\sqrt{2}}\right) \\
+	If\ f(x)=1\Rightarrow \ket{x}\left(\frac{\ket{1}-\ket{0}}{\sqrt{2}}\right)
+\end{aligned}
+\Rightarrow \ket{x}\left(\frac{\ket{0}-\ket{1}}{\sqrt{2}}\right) \rightarrow (-1)^{f(x)}\ket{x}\left(\frac{\ket{0}-\ket{1}}{\sqrt{2}}\right)
+\end{equation*}
+\\
+\[
+\Qcircuit @C=1.4em @R=0.7em{
+	\lstick{\frac{\ket{0}+\ket{1}}{\sqrt{2}}} & \multigate{1}{U_{f}} & \qw \\ 
+	\lstick{\frac{\ket{0}-\ket{1}}{\sqrt{2}}} & \ghost{U_{f}}  & \qw \\ 
+}
+\] 
+\begin{equation*}
+	\left[(-1)^{f(0)}\frac{\ket{0}}{\sqrt{2}}+ (-1)^{f(1)}\frac{\ket{1}}{\sqrt{2}}\right]\left(\frac{\ket{0}-\ket{1}}{\sqrt{2}}\right) = 
+	\begin{dcases}
+		if\ f(0)=f(1) :\ constant\ \ \  \pm\left(\frac{\ket{0}+\ket{1}}{\sqrt{2}}\right)	\left(\frac{\ket{0}-\ket{1}}{\sqrt{2}}\right)	\\
+		if\ f(0)\neq f(1) :\ balanced\ \ \  \pm\left(\frac{\ket{0}-\ket{1}}{\sqrt{2}}\right)	\left(\frac{\ket{0}-\ket{1}}{\sqrt{2}}\right)	\\
+	\end{dcases}
+\end{equation*}
+\[
+\Qcircuit @C=1.4em @R=0.7em{
+	\lstick{\ket{0}}&\gate{H}  & \multigate{1}{U_{f}} & \gate{H} &\meter \\ 
+	\lstick{\ket{1}}&\gate{H}  & \ghost{U_{f}}  & \qw & \qw \\ 
+}
+\] 
+\begin{equation*}
+	\begin{dcases}
+		if\ f(0)=f(1) :\ constant\ \ \  \pm\ket{0}\left(\frac{\ket{0}-\ket{1}}{\sqrt{2}}\right)	\\
+		if\ f(0)\neq f(1) :\ balanced\ \ \  \pm\ket{1}	\left(\frac{\ket{0}-\ket{1}}{\sqrt{2}}\right)	\\
+	\end{dcases}
+\end{equation*}
+So by measureing $1^{st}$ qubit, we may determine a global property $f(0)\oplus f(1)$ using one evaluation of $f(x)$
+\\
+\\
+For n-qubit case
+\[
+\Qcircuit @C=1.4em @R=0.7em{
+	\lstick{\ket{0}}&\gate{H^{\otimes n}}  & \multigate{1}{U_{f}} & \gate{H^{\otimes n}} &\meter \\ 
+	\lstick{\ket{1}}&\gate{H}  & \ghost{U_{f}}  & \qw & \qw \\ 
+}
+\] 
+Classically: The best deterministic classical algorithm requires $\left( \frac{2^{n}}{2}+1\right)$ \\
+Quantumly: Could solve the problem with only one query.
+\[
+\Qcircuit @C=1.4em @R=0.7em{
+	\lstick{\ket{0}}&\gate{H^{\otimes n}}  & \multigate{1}{U_{f}} & \gate{H^{\otimes n}} &\meter \\ 
+	\lstick{\ket{1}}&\gate{H}  & \ghost{U_{f}}  & \qw & \qw \\ 
+						 \ket{\psi_{0}}&\quad\qquad\ket{\psi_{1}}&\qquad\qquad\ket{\psi_{2}}&&\ket{\psi_{3}}
+}
+\] 
+\\
+\begin{equation*}
+\begin{aligned}
+	\ket{\psi_{0}} &= \ket{0}^{\otimes n}\ket{1} \\
+	\ket{\psi_1}&= \sum^{}_{x\in\{0,1\}^{n}} \frac{\ket{x}}{\sqrt{2^{n}}}\left(\frac{\ket{0}-\ket{1}}{\sqrt{2}}\right) \\
+	\ket{\psi_{2}}&= \sum^{}_{x} \frac{(-1)^{f(x)}\ket{x}}{\sqrt{2^{n}}}\left(\frac{\ket{0}-\ket{1}}{\sqrt{2}}\right) \\
+	\ket{\psi_{3}}&= \sum^{}_{z} \sum^{}_{x} \frac{(-1)^{x\cdot z+f(x)}}{2^{n}}\ket{z}\left(\frac{\ket{0}-\ket{1}}{\sqrt{2}}\right)
+\end{aligned}
+\end{equation*}
+\begin{remark}
+	$H\ket{x}= \sum^{}_{z=0,1} \frac{(-1)^{xz}}{\sqrt{2}}\ket{z};\ H^{\otimes n}\ket{x_{1}\cdots x_{n}}=\frac{ \sum^{}_{z_{1}\cdots z_{n}}(-1)^{x_{1}z_1+\cdots+x_{n}z_{n}}\ket{z_{1}\cdots z_n}}{\sqrt{2^{n}}};\ H^{\otimes n}\ket{x}=\frac{ \sum^{}_{z} (-1)^{x\cdot z}}{\sqrt{2^{n}}}\ket{z}$
+\end{remark}
+For $\ket{z}=\ket{0}^{\otimes n}$ state, the amplitute is $ \sum^{}_{x} \frac{(-1)^{f(x)}}{2^{n}}$ 
+\begin{enumerate}
+	\item If f is constant,  $ \sum^{}_{x} \frac{(-1)^{f(x)}}{2^{n}} = \pm 1 \sum^{}_{x} \frac{1}{2^{n}} = \pm 1$ $\because \ket{\psi_{3}}$ is of unit length $\Rightarrow$ all other amplitudes must be zero. 
+	\item If f is balanced. $ \sum^{}_{x} \frac{(-1)^{f(x)}}{2^{n}}=0$ (positive and negative contributions cancel) $\Rightarrow$ A measurement must yield a result ohter than zero on at least one aubit in the data register qubits.
+\end{enumerate}
+$\therefore$ If one measures all 0's, $\ket{0}^{\otimes n}$, then the function is constant otherwise the function is balanced. \\
+\\
+\\
+\textbf{Shor's factoring algorithm} \\
+\\
+\begin{equation*}
+Quantum\ phase\ estimation\ algorithm
+\begin{dcases}
+Quantum\ Fourier\ transformation\\
+H\ gates \\
+Controlled-U\ gates 
+\end{dcases}
+\end{equation*}
+\[
+	Equivalence\ of\ factoring\ and\ order\ finding
+\] 
+\[
+	\textit{	Solving order finding using quantum phase estimation algorithm}
+\] 
+\newpage
+\ \\
+\textbf{Quantum Fourier transform (QFT)} 
+\begin{itemize}
+	\item One of the most useful ways of solving a problem in mathematics and computer sicence is to transform it into some other problem for which a solution if known.
+	\item One such transformation is the discrete Fourier transform DFT takse as input a vector of N complex number's $x_{0},x_{1}\cdots x_{N-1}$ and then outputs the sequence to $y_{0},y_{1}\cdots y_{N-1}$ defined by 
+\[
+	y_{k}=\frac{1}{\sqrt{N}} \sum^{N-1}_{j=0} x_{j}e^{2\pi i j k /N} = \frac{1}{\sqrt{N}} \sum^{N-1}_{j=0} x_{j}\omega^{jk}\ ,\ \forall \omega=e^{2\pi i /N}
+\] 		
+The inverse DFT
+\[
+	x_{j} = \frac{1}{\sqrt{N}} \sum^{N-1}_{k=0} y_{k}e^{-2\pi i j k /N}=\frac{1}{\sqrt{N}} \sum^{N-1}_{k=0} y_{k}\omega^{-jk} \ ,\ \forall \omega=e^{2\pi i /N}
+\] 
+If we let $x$ and $y$ be N-by-1 vectors, then $y=Dx\ \ \forall D_{kj}=\frac{1}{\sqrt{N}}\omega^{jk}$ and $x=D^{-1}y\ \ \forall D^{-1}_{kj}=\frac{1}{\sqrt{N}}\omega^{-jk}$
+\[
+	D = \frac{1}{\sqrt{N}}\begin{pmatrix} 1&1&1&1&\cdots&\cdots \\  1&\omega&\omega^{2}&\omega^{3}&\cdots&\cdots\\  1&\omega^{2}&\omega^{4}&\omega^{6}&\cdots&\cdots\\  1&\omega^{3}&\omega^{6}&\omega^{9}&\cdots&\cdots\\ \vdots & \vdots & \vdots & \vdots &\ddots & \ddots \end{pmatrix} 
+\] 
+\item QFT: is a DFT of the amplitute of a quantum state. Suppose we have the state
+\[
+\ket{\psi}=x_{0}\ket{0}+x_{1}\ket{1}+x_{2}\ket{2}\cdots + x_{N-1}\ket{N-1}
+\] 
+The QFT produces the state
+\[
+\ket{\phi}=y_{0}\ket{0}+y_{1}\ket{1}+y_{2}\ket{2}\cdots + y_{N-1}\ket{N-1}
+\] 
+QFT is defined to be a linear operator with the following action on the basis state 
+\[
+	QFT(\ket{j}) = \frac{1}{\sqrt{N}} \sum^{N-1}_{k=0} e^{2\pi i j k /N}\ket{k}
+\]
+Thus
+\[
+	QFT( \sum^{N-1}_{j=0} x_{j}\ket{j}) = \sum^{N-1}_{j=0} x_{j}QFT(\ket{j}) = \frac{1}{\sqrt{N}}\sum^{N-1}_{j=0} \sum^{N-1}_{k=0} x_{j}e^{2\pi ij k/N}\ket{k} = \sum^{N-1}_{k=0} y_{k} \ket{k}
+\]
+\begin{example} \ \\
+	$\ket{\psi}=\frac{2}{\sqrt{5}}\ket{0}+\frac{1}{\sqrt{5}}\ket{1}\ ;\ D = \frac{1}{\sqrt{2}}\begin{pmatrix} 1&1\\1&e^{2\pi i/2} \end{pmatrix} \ ;\ \ket{\psi'}=QFT(\ket{\psi})= \frac{1}{\sqrt{2}} \begin{pmatrix} 1&1\\1&-1 \end{pmatrix} \begin{pmatrix} \frac{2}{\sqrt{5}}\\ \frac{1}{\sqrt{5}} \end{pmatrix}=\begin{pmatrix} \frac{3}{\sqrt{10}}\\ \frac{1}{\sqrt{10}} \end{pmatrix}  $
+\end{example}
+\item Quantum circuit for QFT \\
+Take $N=2^{n}$, n is some integer, and the basis states $\ket{0},\ket{1}\cdots\ket{2^{n}-1}$ is the computational basis for an n-qubit QC. Notation: $j=j_{1}j_{2}\cdots j_{n}=j_{1}2^{n-1}+j_{2}2^{n-2}+\cdots + j_{n}2^{0}= \sum^{n}_{m=1} j_{m}2^{n-m}$. Binary fraction: $0.j_{l}j_{l+1}\cdots j_{m} = \frac{j_{l}}{2}+\frac{j_{l+1}}{2^{2}}\cdots + \frac{j_{m}}{2^{m-l+1}}$ 
+\begin{equation*}
+\begin{aligned}
+	QFT(\ket{j}) &= \frac{1}{\sqrt{2^{n}}} \sum^{2^{n}-1}_{k=0} e^{2\pi i j k /2^{n}}\ket{k} = \frac{1}{\sqrt{2^{n}}} \sum^{2^{n}-1}_{k=0} e^{2\pi i j \sum^{n}_{l=1} k_{l}2^{n-l}/2^{n}}\ket{k} \\
+					 &= \frac{1}{\sqrt{2^{n}}} \sum^{1}_{k_{1}=0}   \sum^{1}_{k_{2}=0} \cdots \sum^{1}_{k_{n}=0} e^{2\pi i j \sum^{n}_{l=1} k_{l}2^{-l}}\ket{k_{1},k_{2},\cdots k_{n}}  \\
+					 &= \frac{1}{\sqrt{2^{n}}} \sum^{1}_{k_{1}=0}   \sum^{1}_{k_{2}=0} \cdots \sum^{1}_{k_{n}=0} \otimes^{n}_{l=1} e^{2\pi i j k_{l}2^{-l}}\ket{k_{l}} \\
+					 &= \frac{1}{\sqrt{2^n}}\otimes^{n}_{l=1}\left[ \sum^{1}_{k_{l}=0} e^{2\pi i j k_{l} 2^{-l}}\ket{k_{l}}\right] \\
+					 &= \frac{1}{\sqrt{2^n}}\otimes^{n}_{l=1}\left[ \ket{0}+e^{2\pi i j 2^{-l}}\ket{1}\right] \\
+					 &= \frac{1}{\sqrt{2^{n}}}\left[(\ket{0}+e^{2\pi i 0.j_{n}}\ket{1})(\ket{0}+e^{2\pi i 0.j_{n-1}j_{n}}\ket{1})\cdots (\ket{0}+e^{2\pi i 0.j_{1}j_{2}\cdots j_{n}}\ket{1})\right]
+\end{aligned}
+\end{equation*}
+\begin{remark}
+	The trick about the Fast Fourier Transform (FFT) is that it only uses the terms of $e^{2\pi i x y/2^{n}}$ that correspond to the first circle, i.e. the terms for which $\frac{xy}{2^{n}} < 1$
+\end{remark}
+\end{itemize}
 \end{document}
