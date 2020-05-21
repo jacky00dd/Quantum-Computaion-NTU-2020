@@ -1638,11 +1638,238 @@ Take $N=2^{n}$, n is some integer, and the basis states $\ket{0},\ket{1}\cdots\k
 					 &= \frac{1}{\sqrt{2^{n}}} \sum^{1}_{k_{1}=0}   \sum^{1}_{k_{2}=0} \cdots \sum^{1}_{k_{n}=0} \otimes^{n}_{l=1} e^{2\pi i j k_{l}2^{-l}}\ket{k_{l}} \\
 					 &= \frac{1}{\sqrt{2^n}}\otimes^{n}_{l=1}\left[ \sum^{1}_{k_{l}=0} e^{2\pi i j k_{l} 2^{-l}}\ket{k_{l}}\right] \\
 					 &= \frac{1}{\sqrt{2^n}}\otimes^{n}_{l=1}\left[ \ket{0}+e^{2\pi i j 2^{-l}}\ket{1}\right] \\
-					 &= \frac{1}{\sqrt{2^{n}}}\left[(\ket{0}+e^{2\pi i 0.j_{n}}\ket{1})(\ket{0}+e^{2\pi i 0.j_{n-1}j_{n}}\ket{1})\cdots (\ket{0}+e^{2\pi i 0.j_{1}j_{2}\cdots j_{n}}\ket{1})\right]
+					 &= \frac{1}{\sqrt{2^{n}}}\left[(\ket{0}+e^{2\pi i 0.j_{n}}\ket{1})\otimes(\ket{0}+e^{2\pi i 0.j_{n-1}j_{n}}\ket{1})\cdots \otimes(\ket{0}+e^{2\pi i 0.j_{1}j_{2}\cdots j_{n}}\ket{1})\right]
 \end{aligned}
 \end{equation*}
 \begin{remark}
 	The trick about the Fast Fourier Transform (FFT) is that it only uses the terms of $e^{2\pi i x y/2^{n}}$ that correspond to the first circle, i.e. the terms for which $\frac{xy}{2^{n}} < 1$
 \end{remark}
+\begin{example}
+Three qubit QFT
+\[
+\Qcircuit @C=1.4em @R=0.7em{
+	\lstick{\ket{j_{1}}} & \gate{H} & \gate{S} & \gate{T} & \qw & \qw & \qw &\qw \\
+	\lstick{\ket{j_{2}}} & \qw & \ctrl{-1}  & \qw & \gate{H}  & \gate{S}  & \qw &\qw \\
+	\lstick{\ket{j_{3}}} & \qw & \qw & \ctrl{-2}   & \qw & \ctrl{-1} & \gate{H} & \qw \\
+}
+\] 
+\[
+	S = \begin{pmatrix} 1 & 0\\0&i \end{pmatrix} =\begin{pmatrix} 1&0\\0&e^{2\pi i / 2^{2}} \end{pmatrix} \ \ \ T = \begin{pmatrix} 1&0\\0&e^{i\pi/4} \end{pmatrix}   = \begin{pmatrix} 1&0\\0&e^{2\pi i /2^{3}} \end{pmatrix}  \ \ \ \forall  j_{1} = 0 \ or\  1
+\] 
+\begin{equation*}
+\begin{aligned}
+	\ket{j_{1}} &\rightarrow \frac{1}{\sqrt{2}}(\ket{0}+e^{2\pi i 0.j_{1}j_{2}j_{3}}\ket{1})\\
+	\ket{j_{2}}&\rightarrow \frac{1}{\sqrt{2}}(\ket{0}+e^{2\pi i 0.j_{2}j_{3}}\ket{1}) \\
+	\ket{j_{3}}&\rightarrow \frac{1}{\sqrt{2}}(\ket{0}+e^{2\pi i 0.j_{3}}\ket{1}) \\
+\end{aligned}
+\end{equation*}
+\end{example}
+	Thus, if we can construct $R_{k}=\begin{pmatrix} 1&0\\0&e^{2\pi i /2^{k}} \end{pmatrix} $
+\begin{itemize}
+	\item Need swap gates  at the end which reverse the order of qubits. This is the desired output from QFT
+	\item This construction also proves that QFT is unitary since each gate in the circuit is unitary.
+	\item The best classical algorithm (FFT), which computes the FT using $\mathcal{O}(n2^{n})$ gates.
+	\item How many gates does this QFT circuit use ? \\ $(1H+(n-1)\ conditional\ rotation\ gates) + (1H+(n-2)) + \cdots (1H) + \frac{n}{2}\ swap\ gate\approx \mathcal{O}(n^{2})$
+	\begin{center}
+	\textbf{Exponential speed up !!!}
+	\end{center}
+	\item Can we use QFT to speed up the computation of FT?\\
+		Unfortunately, the answer is not positive $\because$ there is no known efficient way to do the following 
+\begin{enumerate}
+	\item Amplitutes in quantum state cannot be directly accessed by quantum measurement.
+	\item In general, no known way to efficiently prepare a generic initial state to be Fourier transformed $\ket{\psi}= \sum^{}_{j} x_{j}\ket{j}$
+\end{enumerate}
+	\item Thus finding use for QFT is more subtle than we might have hope.
+	\item Quantum algorithms find a way to use QFT and extract efficiently useful information from the quantum state.
 \end{itemize}
+\end{itemize}
+\ \\
+\textbf{Quantum phase estimation (QPE)} \\
+\\
+QFT is the key to a general procedure known as QPE, and QPE is the key to many quantum algorithms (e.g. Quantum factoring, discrete logorithm, hidden subgroup problems) \\
+\\
+\textit{Question: Suppose U is a unitary operator with eigenvector $\ket{u}$ and corresponding eigenvalue $e^{2\pi i \phi_{u}}$}
+\[
+U\ket{u}=e^{2\pi i \phi_{u}}\ket{u}
+\] 
+\textit{The goal of QPE is to obtain a good estimate of $\phi_{u}$}\\
+\\
+Assume we have available black boxes (sometimes know as Oracle) capable of 
+\begin{enumerate}
+	\item Preparing the state $\ket{u}$ 
+	\item Performing the controlled- $U^{2^{j}}$ operations for suitable non-negative integers j.
+\end{enumerate}
+This seems like a bit of a cheat: after all, in practice aren't we going to need to know how to do these things. The answer to this question is yes, and in specific examples, such as factoring, we will discuss how these black box operations are to be performed.\\
+GRAPHHHHHHHHHHH!! \\
+\\
+QPE uses two registers
+\begin{itemize}
+	\item The $1^{st}$ register: t-qubits, which will be measured to obtain our estimate about $\phi$
+	\item The $2^{nd}$ register: to which U can be applied $U\ket{u}=e^{2\pi i \phi_{u}}\ket{u}$ contains as many qubits as is necessary to store $\ket{u}$.
+\end{itemize}
+How can we choose t depends on 
+\begin{enumerate}
+	\item The number of digits of accuracy we wish to have in our estimate fo $\phi$ 
+	\item With what probability we wish the QPE to be successful.
+\end{enumerate}
+\[
+	\left(C-U^{2^{j}}\right)\left[\frac{1}{\sqrt{2}}(\ket{0}+\ket{1})\right]\ket{u} = \frac{1}{\sqrt{2}}\left(\ket{0}\ket{u}+\ket{1}U^{2^{j}}\ket{u}\right) = \frac{1}{\sqrt{2}}\left(\ket{0}+\ket{1}e^{2\pi i 2^{j}\phi}\right)\ket{u}
+\] 
+Thus, the output state after acting on t-qubit is
+\begin{equation*}
+\begin{aligned}
+&\frac{1}{\sqrt{2^{t}}}(\ket{0}+e^{2\pi i 2^{t-1}\phi}\ket{1})(\ket{0}+e^{2\pi i 2^{t-2}\phi}\ket{1}) \cdots (\ket{0}+e^{2\pi i 2^{0}\phi}\ket{1}) = \frac{1}{\sqrt{2^{t}}} \sum^{2^{t}-1}_{k=0} e^{2\pi i \phi k}\ket{k}\\
+	\rightarrow & \frac{1}{\sqrt{2^{t}}} (\ket{0}+e^{2\pi i 0.\phi_{t}}\ket{1})(\ket{0}+e^{2\pi i 0.\phi_{t-1}\phi_{t}}\ket{1})\cdots(\ket{0}+e^{2\pi i 0.\phi_{1}\cdots\phi_{t-1}\phi_{t}}\ket{1}\)
+\end{aligned}
+\end{equation*}
+Comparing this equation with the product form for QFT. We see thate the output state after the inverse QFT is the product state $\ket{\phi_{1}\phi_{2}\cdots \phi_{t}}$ \\
+\\
+\textbf{The second stage:} Apply the inverse QFT on the $1^{st}$ register \\
+\textbf{The third stage:} Read out the state of the $1^{st}$ register by doing a measurement in the computational basis.\\
+\\
+Suppose $\phi=0.\phi_{1}\phi_{2}\cdots\phi_{t}$ can be expressed exactly in t qubits. A measurement in the computational basis therefore gives us $\phi$ exactly.\\
+\newpage
+\ \\
+\textbf{Performance and requirement (not ideal case)} \\
+Above analysis applies to the idea case where $\phi$ can be written exactly with a t-bit binary expression. What happens when this is not the case?
+$\Rightarrow$ Still produces a pretty good approximation to $\phi$ with high probability. \\
+Let b be the integer in the range 0 to $2^{t}-1$ such that
+\[
+\frac{b}{2^{t}} = 0.b_{1}b_{2}\cdots b_{t} \textit{ is the best t-bit approximation to } \phi \textit{ which is less than } \phi
+\] 
+Suppose the outcome of the final measurement is m. We aim to bound the probability of obtaining $|m-b|>e$, where e is positive integer characterizing our desired tolerance to error
+\[
+	P(|m-b|>e) \leq \frac{1}{2(e-1)}
+\] 
+Suppose we wish to approximate $\phi$ to an accuracy $2^{-n}$, that is we choose 
+\[
+e = 2^{t-n} -1  = 2^{p} -1 \ \ \ t=n+p\ qubits
+\] 
+Thus,
+\[
+	P(|m-b|>e) \leq \frac{1}{2[(2^{p}-1)-1]}
+\] 
+Then, the probability of obtaining an approximation correct to this accuracy is at least
+\[
+	1-P(|m-b|>e) = 1-\frac{1}{2[(2^{p}-1)-1]} = 1-\epsilon
+\] 
+To successfully obtain $\phi$ accurate to n bits with probability of success at least $1-\epsilon$, we choose
+\[
+	\epsilon = \frac{1}{2(2^{p}-2)} \Rightarrow 2^{p} = 2+\frac{1}{2\epsilon} \Rightarrow p = \log{\left(2+\frac{1}{2\epsilon}\right)}
+\] 
+Thus,
+\[
+	t=n+\log{\left(2+\frac{1}{2\epsilon}\right)}
+\] 
+\\
+\\
+\textbf{What if we do not know how to prepare the eigenstate $\ket{u}$ of U?} \\
+Suppose we prepare a state $\ket{\psi}= \sum^{}_{u} c_{u}\ket{u}, U\ket{u}=e^{2\pi i \phi_{u}}\ket{u}\therefore$ Performing the QPE procedure will give an output state close to $ \sum^{}_{u} c_{u}\ket{\tilde{\phi_{u}}}\ket{u}$, where $\tilde{\phi_{n}}$ is a pretty good approxmation of $\phi_{u}$. Reading out the $1^{st}$ register will give us $\tilde{\phi}$, where  $u$ is chosen at random with probability $|c_{u}|^{2}$. This procedure allows us to avoid preparing a (possibly unknown) eigenstate out the cost of introducing some additional randomness into the algorithm.\\
+\\
+\textbf{Summary} \\
+Input:
+\begin{enumerate}
+	\item A black box which performs a controlled$-U^{j}$ operation for integer j
+	\item An eigenstate $\ket{u}$ of U with eigenstate $e^{2\pi i \phi_{u}}$ 
+	\item $1^{st}$ register of $t=n+\log{\left(2+\frac{1}{2\epsilon}\right)}$ qubits initialized to $\ket{0}$
+\end{enumerate}
+Output: An n-bit approximation $\tilde{\phi_{u}}$ to $\phi_{u}$ \\
+Runtime: $\mathcal{O}(t^{2})$ operations and one call to $C-U^{j}$ black box succeed with. \\
+\newpage
+\ \\
+Procedure:
+\begin{enumerate}
+	\item $\ket{0}^{\otimes t}\ket{u}$ \ \ Initial state
+	\item $\frac{1}{\sqrt{2^{t}}} \sum^{2^{t}-1}_{j=0} \ket{j}\ket{u}$ \ \ Create superposition
+	\item $\frac{1}{\sqrt{2^{t}}} \sum^{2^{t}-1}_{j=0} e^{2\pi i j\phi_u}\ket{j}\ket{u}$ \ \ Apply black box
+	\item $\ket{\tilde{\phi}}\ket{u}$ \ \ Apply inverse QFT
+	\item $\tilde{\phi_{u}}$ \ \ Measure the $1^{st}$ register
+\end{enumerate}
+\ \\
+\textbf{RSA cryptosystem protocol (Asymmetric, public cryptography)}\\
+\\
+Public-key cryptosystem: Alice wishes to create a public key to enable people to send her message and a matching private key with which she can read the message. 
+\begin{enumerate}
+	\item She chooses two very large enough prime number p and q and compute the product N=pq.
+	\item She also picks at a random number $e<\Phi(N)=(p-1)(q-1)$, which is co-prime to  $\Phi(N)$, i.e. $gcd(e,\Phi(N))=1$
+	\item She computes $d$ such that $ed=1 \mod{\Phi(n)}$
+	\item She publishes the pair $(N,e)$ as her public key, so any body has access to it and use it to send her message.
+	\item The pair $(N,d)$ is kept to herself as her private key, so only Alice can decrypt the messages that were encrypted by means of the public key.
+	\item Suppose Bob wants to send a string of bits to Alice
+\begin{enumerate}
+	\item Breaks the message up into blocks of length $\log{N}$ bits each.
+	\item Regards each single block of bits as encoding a number $x_{i}, 0<x_{i}<N\Rightarrow$ Use the public key $(N,e)$ to encode  $x_{i}$ by $x_{i}^{e}\mod{N}$
+\end{enumerate}
+	\item To decode the encrypted block, Alice raise the message to the $d^{th}$ power, obtaining  
+\[
+	(x_{i}^{e})^{d} \mod{N}=x_{i}\mod{N}
+\] 
+\end{enumerate}
+\textbf{Shor's Algorithm} \\
+\ \\
+Best current method to factor a large semi-prime number on a classical computer requires  
+\[
+	\exp{\left(\mathcal{O}(n^{\frac{1}{3}}\log^{\frac{2}{3}}{n})\right)}
+\] 
+Shor's algorithm
+\[
+	\mathcal{O}(n^{2}\log{n}\log{\log{n}})
+\] 
+\textbf{Equivalance of factoring and order finding}\\
+Shor's algorithm hinges on a result from number theory. The function $F(a)=x^{a} \mod{N}$ is a periodic function, where x is an integer co-prime to N.\\
+Suppose r is the period of $F(a)$, we know $x^{0}\mod{N}=1$, $x^{r} \mod{N} = 1$ and $x^{2r}\mod{N}=1$
+\[
+	(x^{r}-1)\mod{N} = 0 \Rightarrow (x^{r/2}+1)(x^{r/2}-1) = kN = km_{1}m_{2}\Rightarrow 
+\begin{aligned}
+\begin{dcases}
+	gcd(x^{r/2}-1,N) &= m_{1} \\
+	gcd(x^{r/2}+1,N) &= m_{2} \\
+\end{dcases}
+\end{aligned}
+\] 
+Thus, it is equivalent to factoring N. \\
+\newpage
+\ \\
+\textbf{Order finding:} For positive integers x and N, $x<N$, with no common factors, then order $x\mod{N}$ is defined to be the least positive integer r such that  $x^{r}=1\mod{N}$
+\begin{itemize}
+	\item The order finding problem is to determine the order for some specified x and N
+	\item The order finding problem is believed to be a hard problem in a classical computer.
+	\item Caculating $x^{a}$ for an exponential number of a's would take exponential time on a classical computer.
+	\item Shor's algorithm utilize quantum parallelism to perform the exponential number of operations in one step!! 
+\end{itemize}
+\textbf{Solving order-finding using QPE} \ \\
+\[
+	x^{r}=1 \mod{N}
+\] 
+Consider the operator 
+\[
+	U\ket{y}=\ket{xy\mod{N}}\quad \forall y\in\{0,1\}^{L}, L \approx \log_{2}{N}\textit{ number of bits needed to specify N} 
+\] 
+As x and N are co-prime, this operator U is unitary.
+\[
+	x\cdot x^{r-1} = 1 \mod{N} \Rightarrow x^{r-1}\textit{ is an inverse for $x\mod{N}$}
+\] 
+\[
+	U^{r}\ket{y}=U^{r-1}\ket{xy\mod{N}} = \ket{x^{r}y\mod{N}} = \ket{y\mod{N}} = \ket{y}
+\] 
+Thus, $U^{r}=I$. U's eigenvalues have the form $e^{2\pi is/r}$ for some integer s $\therefore$ If we can apply QPE to find  $\frac{s}{r}$, we will have obtained a considerable amount of information to help us determine r.\\
+\\
+\textit{What are the eigenvalues and eigenvectors of U?}\\
+One set is 
+\[
+	\ket{u_s} = \frac{1}{\sqrt{r}} \sum^{r-1}_{k=0} e^{-2\pi i s k /r}\ket{x^{k}\mod{N}}\quad \forall\ 0\leq s \leq r-1 
+\]
+\[
+U\ket{u_{s}} = \frac{1}{\sqrt{r}} \sum^{r-1}_{k=0} e^{-2\pi i s k /r}\ket{x^{k+1}\mod{N}} = e^{2\pi i s k /r}\ket{u_{s}}
+\] 
+Two important requirements to be able to use QPE procedure
+\begin{enumerate}
+	\item Must have efficient procedure to implement a $C-U^{2}$ operation.\\\\
+		Using a procedure known as modular exponentiation with which we can implement the entire sequence of $C-U^{2}$ operations applied by the QPE procedure using $\mathcal{O}(L^{3})$ gates.
+	\item Must be able to efficiently prepare an eigenstate $\ket{u_{s}}$ with a non-trivial eigenvalue or at least a superposition of such eigenstate.\\\\
+	Preparing $\ket{u_{s}}$ directly requires that we know r, so it is impossible. Fortunately, there is a clever observation which allows us to circumvent this problem. The observation is 
+\[
+	\frac{1}{\sqrt{r}} \sum^{r-1}_{s=0} \ket{u_{s}} = \ket{1} \ \left(\because \sum^{r-1}_{s=0} e^{-2\pi i s k /r} = r\delta_{k0}\right)
+\] 
+\end{enumerate}
 \end{document}
