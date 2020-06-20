@@ -1860,16 +1860,100 @@ One set is
 	\ket{u_s} = \frac{1}{\sqrt{r}} \sum^{r-1}_{k=0} e^{-2\pi i s k /r}\ket{x^{k}\mod{N}}\quad \forall\ 0\leq s \leq r-1 
 \]
 \[
-U\ket{u_{s}} = \frac{1}{\sqrt{r}} \sum^{r-1}_{k=0} e^{-2\pi i s k /r}\ket{x^{k+1}\mod{N}} = e^{2\pi i s k /r}\ket{u_{s}}
+U\ket{u_{s}} = \frac{1}{\sqrt{r}} \sum^{r-1}_{k=0} e^{-2\pi i s k /r}\ket{x^{k+1}\mod{N}} = e^{2\pi i s  /r}\ket{u_{s}}
 \] 
 Two important requirements to be able to use QPE procedure
 \begin{enumerate}
 	\item Must have efficient procedure to implement a $C-U^{2}$ operation.\\\\
-		Using a procedure known as modular exponentiation with which we can implement the entire sequence of $C-U^{2}$ operations applied by the QPE procedure using $\mathcal{O}(L^{3})$ gates.
+		Using a procedure known as modular exponentiation with which we can implement the entire sequence of $C-U^{2}$ operations applied by the QPE procedure using $\mathcal{O}(L^{3})$ gates. \\\\
+	Modular exponentiation:\\ In order finding algorithm, we wish to compute 
+\begin{equation*}
+\begin{aligned}
+	\ket{z}\ket{y}\rightarrow \ket{z}U^{z_{t}2^{t-1}}\cdots U^{z_{2}2^{1}}U^{z_{1}2^{0}}\ket{y} &= \ket{z}\ket{x^{z_{t}2^{t-1}}\cdots x^{z_{2}2^{1}}x^{z_{1}2^{0}}y\mod{N}} \\
+																															  &= \ket{z}\ket{x^{z}y\mod{N}} = \ket{z}\ket{x^{z}\mod{N}\quad y\mod{N}}
+\end{aligned}
+\end{equation*}
+Classical computation: 
+\begin{enumerate}
+	\item By square and multiply, a total of $(t-1)$ squaring operations at a cost of  $\mathcal{O}(L^{2})$ each. The total cost of $\mathcal{O}(L^{3})$ for the $1^{st}$ stage.
+	\item $x^{z}\mod{N}=(x^{z_{t}2^{t-1}}\mod{N})(x^{z_{t-1}2^{t-2}}\mod{N})\cdots (x^{z_{1}2^{0}}\mod{N})$ performing t-1 modular multiplications with a cost of $\mathcal{O}(L^{2})$ for each multiplication. The total cost of $\mathcal{O}(L^{3})$ for the second stage.
+\end{enumerate}
+\[
+\Qcircuit @C=1.4em @R=0.7em{
+	\lstick{\ket{y}} & {/} \qw & \multigate{1}{U_{f}} & \rstick{\ket{y}} \qw  \\
+	\lstick{\ket{z}} & {/} \qw & \ghost{U_{f}} & \rstick{\ket{z\oplus f(y)}} \qw \\
+}
+\] 
+\begin{equation*}
+\begin{aligned}
+	\ket{y,0} \rightarrow \ket{y,0\oplus x^{2^{j}}y\mod{N}} \rightarrow \ket{y\oplus x^{-2^{j}}(x^{2^{j}}y\mod{N}),x^{2^{j}}y\mod{N}} &= \ket{y\oplus y,x^{2^{j}}y\mod{N}}\\
+																																												 &= \ket{0,x^{2^{j}}y\mod{N}}
+\end{aligned}
+\end{equation*}
+In performing the QPE procedure, if we use $t=n+\log{2+\frac{1}{2\epsilon}}$ qubits in the $1^{st}$ register (e.g. n=2L+1) and prepare the second register in the state $\ket{1}$, it follows that for each s chosen uniformly at random from the range $0\leq s \leq r-1$, we will obtain an estimate of the phase $\phi\approx \frac{s}{r}$  accurate to n=2L+1 bits, with prob at least $\frac{1}{r}(1-\epsilon)$ \\ \\
+The continued fraction expansion: How to obtain the desire answer, r, from the result of the QPE, $\phi\approx \frac{s}{r}$? Given that we only know $\phi$ to n=2L+1 bits, but we also know that it is a rational number. If we could compute the nearest such fraction to $\phi$, we might obtain r.
+\begin{theorem}
+Suppose $\frac{s}{r}$ is a rational number such that
+\[
+|\frac{s}{r}-\phi| \leq \frac{1}{2r^{2}}
+\] 
+Then $\frac{s}{r}$ is a convergent of continued fraction for $\phi$ and thus can be computed in $\mathcal{O}(L^{3})$ operations using the CF algorithm.
+\end{theorem}
+To summerize, given $\phi$ the CF algorithm efficiently produces number $s'$ and $r'$ with no common factor such that $\frac{s'}{r'}=\frac{s}{r}$. The number $r'$ is our candidate for the order. We can check to see whether it is the order by calculating $x^{r'}\mod{N}$ and seeing if the result is 1, i.e, $x^{r'} \mod{N} ? 1$. If so, then $r'$ is the order of $x\mod{N}$, and we are done.
+\begin{definition}
+	A finite simple CF is defined by
+\[
+	[a_0,a_{1},a_{2}\cdots a_{M}] = a_{0} + \frac{1}{a_{1}+\frac{1}{a_{2}+\frac{1}{\ddots+\frac{1}{a_{M}}}}}
+\] 
+We define the $n^{th}$ convergent $(0\leq n\leq M)$ to this CF to be  $[a_{0},a_{1}\cdots a_{n}]$
+\end{definition}
+\begin{theorem}
+Let $a_{0},a_{1}\cdots a_{M}$ be a sequence of positive numbers, then 
+\[
+	[a_0,a_{1},\cdots a_{n}]=\frac{p_{n}}{q_{n}}
+\] 
+where $p_{n}$ and $q_{n}$ are real numbers defined inductively by
+\[
+p_{0} = a_{0}\quad q_{0} = 1; p_{1}=1+a_{0}a_{1}\quad q_{1}=a_{1};  p_{n} = a_{n}p_{n-1}+p_{n-2}\quad q_{n} = a_{n}q_{n-1}+q_{n-2}
+\] 
+\end{theorem}
+\textbf{Performance of order-finding algorithm}\\
+\textit{How can order-finding algorithm fail?}
+\begin{enumerate}
+	\item The QPE might produce a bad estimate to $\frac{s}{r}$. This occurs with probability at most $\epsilon$, adn can be made small with negligible increase in the size of t.
+	\item $\frac{s}{r}$ might have a common factor, then the number $r'$ returned by the CF algorithm could be a factor of r adn not r itself.  
+\end{enumerate}
+One way around the problem is the following. The idea is to repeat the QPE-CF procedure twice obtaining $\frac{s_{1}'}{r_{1}'}$ and $\frac{s_{2}'}{r_{2}'}$, provided that $s_{1}'$ and $s_{2}'$ have no common factors, r may be extracted by taking the least common multiple of $r_{1}$ and $r_{2}$.
 	\item Must be able to efficiently prepare an eigenstate $\ket{u_{s}}$ with a non-trivial eigenvalue or at least a superposition of such eigenstate.\\\\
 	Preparing $\ket{u_{s}}$ directly requires that we know r, so it is impossible. Fortunately, there is a clever observation which allows us to circumvent this problem. The observation is 
 \[
 	\frac{1}{\sqrt{r}} \sum^{r-1}_{s=0} \ket{u_{s}} = \ket{1} \ \left(\because \sum^{r-1}_{s=0} e^{-2\pi i s k /r} = r\delta_{k0}\right)
 \] 
 \end{enumerate}
+Summary: Quantum order-finding algorithm\\
+Input:
+\begin{enumerate}
+	\item A black box $U_{xN}$ which perform the transformation $\ket{j}\ket{k}\rightarrow \ket{j}\ket{x^{j}k\mod{N}}$ for x co-prime to the L bit N. 
+	\item $t = (2L+1) + \log{2+\frac{1}{2\epsilon}}$ qubits initialized to $\ket{0}$
+	\item L qubits initailized to $\ket{1}$ 
+\end{enumerate}
+Output: The least integer $r>0$ such that $x^{r}=1\mod{N}$ \\
+Runtime: $\mathcal{O}(L^{3})$ operations. Succeeds with prob $\mathcal{O}(1-\epsilon)\approx \mathcal{O}(1)$\\
+Procedure
+\begin{enumerate}
+	\item $\ket{0}\ket{1}$ initial state
+	\item $\rightarrow \frac{1}{\sqrt{2^{t}}} \sum^{2^{t}-1}_{j=0}\ket{j}\ket{1} $ create superposition on the $1^{st}$ register.
+	\item $\rightarrow \frac{1}{\sqrt{2^{t}}} \sum^{2^{t}-1}_{j=0} \ket{j}\ket{x^{j}\mod{N}}= \frac{1}{\sqrt{2^{t}}}\frac{1}{\sqrt{r}} \sum^{r}_{s=0} \sum^{2^t}_{j=0} e^{2\pi i s j /r}\ket{j}\ket{u_{s}}$ apply $U_{x,N}$
+	\item $\rightarrow \frac{1}{\sqrt{r}} \sum^{r-1}_{s=0} \ket{\frac{s}{r}}\ket{u_{s}}$ apply $QFT^{\dagger}$ to the $1^{st}$ register.
+	\item $\rightarrow \frac{s_{m}}{r}\ket{u_{s}}$ measure the $1^{st}$ register.
+	\item $\rightarrow r$ apply CF algorithm 
+\end{enumerate}
+Let us consider
+\[
+\Qcircuit @C=1.4em @R=0.7em{
+	\lstick{\ket{0}} & {/} \qw & \gate{H^{\otimes t}} & \ctrl{1} & \qw & \gate{QFT^{\dagger}} & \meter \\ 	
+	\lstick{\ket{1}} & {/} \qw & \qw & \gate{x^{j}\mod{N}}  & \qw &  \meter \\ 	
+}
+\] 
+Performing a measurement in the computational basis to determine the bit values in the $2^{nd}$ register. Suppose the result is m where $m=x^{a}\mod{N}$
 \end{document}
